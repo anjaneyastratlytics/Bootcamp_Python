@@ -1,0 +1,61 @@
+{
+  "generator_version": "py201-synth-v1",
+  "seed": 201,
+  "counts": {
+    "dealers": 80,
+    "products": 320,
+    "inventory_rows": 900,
+    "sales_events": 1500
+  },
+  "snapshot_dates": [
+    "2025-11-30",
+    "2025-12-31",
+    "2026-01-31"
+  ],
+  "dirty_rates": {
+    "dealer.csv": 0.06,
+    "product.csv": 0.07,
+    "inventory.csv": 0.08,
+    "sales_logs.jsonl": 0.06
+  },
+  "enums": {
+    "regions": [
+      "NORTH",
+      "SOUTH",
+      "EAST",
+      "WEST"
+    ],
+    "dealer_types": [
+      "RETAIL",
+      "WHOLESALE"
+    ],
+    "categories": [
+      "AIR_FILTER",
+      "OIL_FILTER",
+      "CABIN_FILTER",
+      "FUEL_FILTER",
+      "ENGINE_FILTER",
+      "TRANSMISSION_FILTER"
+    ],
+    "uom": [
+      "EA",
+      "BOX"
+    ],
+    "channels": [
+      "POS",
+      "WEB",
+      "PHONE"
+    ],
+    "event_types": [
+      "SALE",
+      "RETURN",
+      "ADJUSTMENT"
+    ],
+    "status": [
+      "SUCCESS",
+      "FAILED"
+    ]
+  },
+  "generated_at_utc": "2026-02-11T20:02:22Z",
+  "notes": "Clean and dirty variants generated. Dirty injection report contains exact mutations."
+}

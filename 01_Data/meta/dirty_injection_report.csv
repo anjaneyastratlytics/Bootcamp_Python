@@ -1,0 +1,211 @@
+file_name,record_locator,column_name,error_code,original_value,injected_value
+dealer.csv,37,dealer_name,E001_MISSING_REQUIRED,Kolkata Auto Parts - 37,
+dealer.csv,54,dealer_code,E007_DUPLICATE_KEY,DLR-00054,DLR-00063
+dealer.csv,27,dealer_code,E007_DUPLICATE_KEY,DLR-00027,DLR-00010
+dealer.csv,59,dealer_code,E007_DUPLICATE_KEY,DLR-00059,DLR-00002
+dealer.csv,18,dealer_type,E003_BAD_ENUM,RETAIL,SHOP
+product.csv,48,unit_price,E008_BUSINESS_RULE,18.89,10.79
+product.csv,188,unit_price,E008_BUSINESS_RULE,12.16,7.28
+product.csv,315,unit_price,E008_BUSINESS_RULE,16.34,8.99
+product.csv,279,unit_price,E002_BAD_TYPE,24.59,NA
+product.csv,317,unit_price,E008_BUSINESS_RULE,14.56,9.49
+product.csv,146,category,E003_BAD_ENUM,FUEL_FILTER,FILTER_MISC
+product.csv,27,sku,E001_MISSING_REQUIRED,SKU-AF-00027,
+product.csv,27,unit_price,E008_BUSINESS_RULE,12.08,7.2
+product.csv,301,unit_price,E008_BUSINESS_RULE,12.36,7.94
+product.csv,131,unit_price,E008_BUSINESS_RULE,11.96,7.41
+product.csv,216,sku,E007_DUPLICATE_KEY,SKU-AF-00216,SKU-OF-00080
+product.csv,167,unit_price,E008_BUSINESS_RULE,11.88,6.77
+product.csv,77,product_name,E001_MISSING_REQUIRED,Transmission Filter S - BrandE Series-2,
+product.csv,211,unit_price,E002_BAD_TYPE,13.46,NA
+product.csv,106,unit_price,E008_BUSINESS_RULE,9.96,7.75
+product.csv,106,unit_price,E008_BUSINESS_RULE,7.75,5.76
+product.csv,251,sku,E007_DUPLICATE_KEY,SKU-OF-00251,SKU-EF-00264
+product.csv,97,category,E003_BAD_ENUM,OIL_FILTER,FILTER_MISC
+product.csv,90,unit_price,E002_BAD_TYPE,16.79,NA
+product.csv,203,category,E003_BAD_ENUM,OIL_FILTER,FILTER_MISC
+product.csv,189,sku,E001_MISSING_REQUIRED,SKU-TF-00189,
+product.csv,300,category,E003_BAD_ENUM,FUEL_FILTER,FILTER_MISC
+product.csv,209,unit_price,E002_BAD_TYPE,7.86,"12,50"
+product.csv,209,unit_cost,E002_BAD_TYPE,5.82,"12,50"
+product.csv,50,unit_price,E002_BAD_TYPE,9.13,NA
+inventory.csv,INV-20260131-00809,on_order_qty,E005_BAD_RANGE,0,-5
+inventory.csv,INV-20251231-00456,on_hand_qty,E005_BAD_RANGE,78,-8
+inventory.csv,INV-20251231-00347,on_hand_qty,E005_BAD_RANGE,14,-1
+inventory.csv,INV-20251130-00093,last_sale_date,E004_BAD_DATE,2025-11-16,2025-12-03
+inventory.csv,INV-20251130-00093,on_order_qty,E005_BAD_RANGE,8,-14
+inventory.csv,INV-20251130-00218,on_order_qty,E005_BAD_RANGE,84,-6
+inventory.csv,INV-20260131-00868,last_sale_date,E004_BAD_DATE,2026-01-05,2026-02-10
+inventory.csv,INV-20260131-00868,snapshot_date,E001_MISSING_REQUIRED,2026-01-31,
+inventory.csv,INV-20251231-00452,on_hand_qty,E002_BAD_TYPE,2,10 units
+inventory.csv,INV-20260131-00720,last_sale_date,E004_BAD_DATE,2026-01-06,2026-02-06
+inventory.csv,INV-20260131-00720,on_hand_qty,E005_BAD_RANGE,19,-8
+inventory.csv,INV-20251231-00536,last_sale_date,E004_BAD_DATE,2025-12-05,2026-01-05
+inventory.csv,INV-20260131-00635,snapshot_date,E002_BAD_TYPE,2026-01-31,2026/01/31
+inventory.csv,INV-20260131-00635,snapshot_date,E001_MISSING_REQUIRED,2026/01/31,
+inventory.csv,INV-20260131-00701,product_id,E006_FK_NOT_FOUND,168,339
+inventory.csv,INV-20251231-00408,last_sale_date,E004_BAD_DATE,2025-12-08,2026-01-02
+inventory.csv,INV-20251130-00104,snapshot_date,E002_BAD_TYPE,2025-11-30,2026/01/31
+inventory.csv,INV-20251231-00356,on_order_qty,E005_BAD_RANGE,5,-15
+inventory.csv,INV-20251130-00229,snapshot_date,E002_BAD_TYPE,2025-11-30,2026/01/31
+inventory.csv,INV-20260131-00816,on_hand_qty,E005_BAD_RANGE,45,-17
+inventory.csv,INV-20251130-00095,on_order_qty,E005_BAD_RANGE,2,-8
+inventory.csv,INV-20251231-00399,on_hand_qty,E005_BAD_RANGE,12,-10
+inventory.csv,INV-20260131-00703,product_id,E006_FK_NOT_FOUND,154,327
+inventory.csv,INV-20260131-00703,on_order_qty,E005_BAD_RANGE,7,-20
+inventory.csv,INV-20251231-00436,on_hand_qty,E002_BAD_TYPE,12,10 units
+inventory.csv,INV-20260131-00849,snapshot_date,E001_MISSING_REQUIRED,2026-01-31,
+inventory.csv,INV-20260131-00782,dealer_id,E006_FK_NOT_FOUND,12,81
+inventory.csv,INV-20260131-00760,last_sale_date,E004_BAD_DATE,2026-01-15,2026-02-09
+inventory.csv,INV-20251231-00386,on_order_qty,E005_BAD_RANGE,9,-14
+inventory.csv,INV-20251231-00336,dealer_id,E006_FK_NOT_FOUND,57,87
+inventory.csv,INV-20251231-00336,on_order_qty,E005_BAD_RANGE,7,-9
+inventory.csv,INV-20251130-00244,on_hand_qty,E002_BAD_TYPE,17,10 units
+inventory.csv,INV-20251130-00244,snapshot_date,E001_MISSING_REQUIRED,2025-11-30,
+inventory.csv,INV-20251231-00533,on_hand_qty,E005_BAD_RANGE,198,-19
+inventory.csv,INV-20251130-00262,on_order_qty,E005_BAD_RANGE,8,-5
+inventory.csv,INV-20260131-00679,on_hand_qty,E002_BAD_TYPE,14,10 units
+inventory.csv,INV-20260131-00744,on_hand_qty,E002_BAD_TYPE,18,10 units
+inventory.csv,INV-20251231-00434,last_sale_date,E004_BAD_DATE,2025-12-20,2026-01-02
+inventory.csv,INV-20251130-00178,last_sale_date,E004_BAD_DATE,2025-11-22,2025-12-14
+inventory.csv,INV-20251231-00372,last_sale_date,E004_BAD_DATE,2025-12-01,2026-01-13
+inventory.csv,INV-20260131-00796,on_hand_qty,E005_BAD_RANGE,24,-15
+inventory.csv,INV-20260131-00872,snapshot_date,E001_MISSING_REQUIRED,2026-01-31,
+inventory.csv,INV-20251130-00083,snapshot_date,E002_BAD_TYPE,2025-11-30,2026/01/31
+inventory.csv,INV-20251130-00205,on_hand_qty,E002_BAD_TYPE,11,10 units
+inventory.csv,INV-20251231-00587,dealer_id,E006_FK_NOT_FOUND,55,88
+inventory.csv,INV-20251231-00312,last_sale_date,E004_BAD_DATE,2025-12-04,2026-01-11
+inventory.csv,INV-20251231-00529,on_hand_qty,E005_BAD_RANGE,16,-19
+inventory.csv,INV-20251231-00529,on_hand_qty,E002_BAD_TYPE,-19,10 units
+inventory.csv,INV-20251130-00235,snapshot_date,E001_MISSING_REQUIRED,2025-11-30,
+inventory.csv,INV-20251130-00270,last_sale_date,E004_BAD_DATE,2025-11-22,2025-12-08
+inventory.csv,INV-20260131-00813,snapshot_date,E002_BAD_TYPE,2026-01-31,2026/01/31
+inventory.csv,INV-20251130-00085,snapshot_date,E001_MISSING_REQUIRED,2025-11-30,
+inventory.csv,INV-20251231-00376,last_sale_date,E004_BAD_DATE,2025-12-24,2026-01-08
+inventory.csv,INV-20251130-00203,product_id,E006_FK_NOT_FOUND,267,329
+inventory.csv,INV-20251231-00467,on_order_qty,E005_BAD_RANGE,4,-1
+inventory.csv,INV-20251130-00072,on_hand_qty,E005_BAD_RANGE,1,-4
+inventory.csv,INV-20251130-00102,snapshot_date,E002_BAD_TYPE,2025-11-30,2026/01/31
+inventory.csv,INV-20260131-00611,on_hand_qty,E005_BAD_RANGE,32,-19
+inventory.csv,INV-20251130-00241,snapshot_date,E002_BAD_TYPE,2025-11-30,2026/01/31
+inventory.csv,INV-20251231-00392,snapshot_date,E002_BAD_TYPE,2025-12-31,2026/01/31
+inventory.csv,INV-20260131-00857,on_order_qty,E005_BAD_RANGE,7,-14
+inventory.csv,INV-20260131-00632,last_sale_date,E004_BAD_DATE,2026-01-11,2026-02-08
+inventory.csv,INV-20260131-00892,on_order_qty,E005_BAD_RANGE,2,-17
+inventory.csv,INV-20260131-00847,on_order_qty,E005_BAD_RANGE,13,-6
+inventory.csv,INV-20251231-00570,last_sale_date,E004_BAD_DATE,2025-12-17,2026-01-13
+inventory.csv,INV-20251231-00473,last_sale_date,E004_BAD_DATE,2025-12-06,2026-01-09
+inventory.csv,INV-20251130-00163,last_sale_date,E004_BAD_DATE,2025-11-15,2025-12-01
+inventory.csv,INV-20260131-00692,snapshot_date,E001_MISSING_REQUIRED,2026-01-31,
+inventory.csv,INV-20260131-00617,last_sale_date,E004_BAD_DATE,2026-01-05,2026-02-10
+inventory.csv,INV-20260131-00746,last_sale_date,E004_BAD_DATE,2026-01-10,2026-02-03
+inventory.csv,INV-20260131-00746,snapshot_date,E001_MISSING_REQUIRED,2026-01-31,
+inventory.csv,INV-20251231-00535,on_hand_qty,E005_BAD_RANGE,69,-14
+inventory.csv,INV-20251130-00167,on_order_qty,E005_BAD_RANGE,4,-16
+inventory.csv,INV-20251130-00167,snapshot_date,E001_MISSING_REQUIRED,2025-11-30,
+inventory.csv,INV-20260131-00623,on_hand_qty,E002_BAD_TYPE,119,10 units
+inventory.csv,INV-20260131-00650,snapshot_date,E002_BAD_TYPE,2026-01-31,2026/01/31
+inventory.csv,INV-20251130-00084,on_hand_qty,E005_BAD_RANGE,23,-15
+inventory.csv,INV-20260131-00705,on_order_qty,E005_BAD_RANGE,14,-16
+inventory.csv,INV-20260131-00765,on_order_qty,E005_BAD_RANGE,9,-15
+inventory.csv,INV-20251231-00540,product_id,E006_FK_NOT_FOUND,62,322
+inventory.csv,INV-20251130-00122,last_sale_date,E004_BAD_DATE,2025-11-15,2025-12-06
+inventory.csv,INV-20251231-00412,on_order_qty,E005_BAD_RANGE,0,-14
+sales_logs.jsonl,EVT-0000213,dealer_id,E006_FK_NOT_FOUND,23,83
+sales_logs.jsonl,EVT-0000599,product_id,E001_MISSING_REQUIRED,222,null
+sales_logs.jsonl,EVT-0000532,ts,E004_BAD_DATE,2025-12-24T17:03:35Z,2026/02/01 10:00:00
+sales_logs.jsonl,EVT-0001188,ts,E004_BAD_DATE,2026-02-07T16:43:44Z,2026/02/01 10:00:00
+sales_logs.jsonl,EVT-0001323,dealer_id,E006_FK_NOT_FOUND,10,84
+sales_logs.jsonl,EVT-0001150,qty,E008_BUSINESS_RULE,4,0
+sales_logs.jsonl,EVT-0000534,status,E003_BAD_ENUM,SUCCESS,UNKNOWN
+sales_logs.jsonl,EVT-0000278,channel,E003_BAD_ENUM,POS,UNKNOWN
+sales_logs.jsonl,EVT-0000017,status,E003_BAD_ENUM,SUCCESS,UNKNOWN
+sales_logs.jsonl,EVT-0000017,qty,E008_BUSINESS_RULE,5,-5
+sales_logs.jsonl,EVT-0000506,(line),E010_MALFORMED_JSON,"{""event_id"":""EVT-0000506"",""ts"":""2025-12-28T16:47:28Z"",""dealer_id"":59,""product_id"":264,""order_id"":""ORD-20251228-7853"",""event_type"":""SALE"",""qty"":5,""unit_price"":26.6,""currency"":""INR"",""channel"":""WEB"",""user_id"":""u-1965"",""status"":""SUCCESS"",""notes"":""""}","{'event_id':""EVT-0000506"",""ts"":""2025-12-28T16:47:28Z"",""dealer_id"":59,""product_id"":264,""order_id"":""ORD-20251228-7853"",""event_type"":""SALE"",""qty"":5,""unit_price"":26.6,""currency"":""INR"",""channel"":""WEB"",""user_id"":""u-1965"",""status"":""SUCCESS"",""notes"":""""}"
+sales_logs.jsonl,EVT-0001411,ts,E004_BAD_DATE,2026-02-06T11:58:42Z,2026/02/01 10:00:00
+sales_logs.jsonl,EVT-0001087,product_id,E006_FK_NOT_FOUND,32,321
+sales_logs.jsonl,EVT-0000646,qty,E008_BUSINESS_RULE,3,0
+sales_logs.jsonl,EVT-0000295,qty,E008_BUSINESS_RULE,1,0
+sales_logs.jsonl,EVT-0000420,ts,E004_BAD_DATE,2026-01-29T14:10:36Z,2026/02/01 10:00:00
+sales_logs.jsonl,EVT-0000958,product_id,E006_FK_NOT_FOUND,247,338
+sales_logs.jsonl,EVT-0000901,ts,E004_BAD_DATE,2026-01-27T09:22:08Z,2026/02/01 10:00:00
+sales_logs.jsonl,EVT-0001183,qty,E008_BUSINESS_RULE,-2,2
+sales_logs.jsonl,EVT-0000971,channel,E003_BAD_ENUM,WEB,UNKNOWN
+sales_logs.jsonl,EVT-0001475,channel,E003_BAD_ENUM,WEB,UNKNOWN
+sales_logs.jsonl,EVT-0000694,event_type,E003_BAD_ENUM,SALE,PURCHASE
+sales_logs.jsonl,EVT-0001130,ts,E001_MISSING_REQUIRED,2025-12-06T13:04:10Z,null
+sales_logs.jsonl,EVT-0001447,qty,E008_BUSINESS_RULE,7,-7
+sales_logs.jsonl,EVT-0000490,ts,E004_BAD_DATE,2026-01-11T20:57:45Z,2026/02/01 10:00:00
+sales_logs.jsonl,EVT-0000181,qty,E008_BUSINESS_RULE,4,-4
+sales_logs.jsonl,EVT-0000181,qty,E008_BUSINESS_RULE,-4,-1
+sales_logs.jsonl,EVT-0000858,qty,E008_BUSINESS_RULE,7,0
+sales_logs.jsonl,EVT-0001002,qty,E008_BUSINESS_RULE,3,0
+sales_logs.jsonl,EVT-0001002,ts,E001_MISSING_REQUIRED,2026-02-10T10:02:26Z,(deleted)
+sales_logs.jsonl,EVT-0000262,ts,E004_BAD_DATE,2026-01-06T10:32:22Z,2026/02/01 10:00:00
+sales_logs.jsonl,EVT-0000456,dealer_id,E001_MISSING_REQUIRED,35,null
+sales_logs.jsonl,EVT-0000753,channel,E003_BAD_ENUM,POS,UNKNOWN
+sales_logs.jsonl,EVT-0001297,qty,E008_BUSINESS_RULE,1,0
+sales_logs.jsonl,EVT-0000250,qty,E008_BUSINESS_RULE,13,0
+sales_logs.jsonl,EVT-0000904,(line),E010_MALFORMED_JSON,"{""event_id"":""EVT-0000904"",""ts"":""2026-02-07T12:40:22Z"",""dealer_id"":9,""product_id"":269,""order_id"":""ORD-20260207-4974"",""event_type"":""SALE"",""qty"":6,""unit_price"":13.65,""currency"":""INR"",""channel"":""WEB"",""user_id"":""u-1589"",""status"":""SUCCESS"",""notes"":""""}","{""event_id"":""EVT-0000904"",""ts"":""2026-02-07T12:40:22Z"",""dealer_id"":9,""product_id"":269,""order_id"":""ORD-20260207-4974"",""event_type"":""SALE"",""qty"":6,""unit_price"":13.65,""currency"":""INR"",""channel"":""WEB"",""user_id"":""u-1589"",""status"":""SUCCESS"",""notes"":"""""
+sales_logs.jsonl,EVT-0001486,ts,E004_BAD_DATE,2026-02-01T17:40:33Z,2026/02/01 10:00:00
+sales_logs.jsonl,EVT-0001106,dealer_id,E001_MISSING_REQUIRED,29,null
+sales_logs.jsonl,EVT-0000978,dealer_id,E006_FK_NOT_FOUND,3,81
+sales_logs.jsonl,EVT-0000987,product_id,E006_FK_NOT_FOUND,187,323
+sales_logs.jsonl,EVT-0000987,qty,E008_BUSINESS_RULE,7,0
+sales_logs.jsonl,EVT-0000025,product_id,E006_FK_NOT_FOUND,111,339
+sales_logs.jsonl,EVT-0000170,dealer_id,E001_MISSING_REQUIRED,80,(deleted)
+sales_logs.jsonl,EVT-0000245,product_id,E006_FK_NOT_FOUND,38,336
+sales_logs.jsonl,EVT-0000641,channel,E003_BAD_ENUM,WEB,UNKNOWN
+sales_logs.jsonl,EVT-0000457,qty,E008_BUSINESS_RULE,8,0
+sales_logs.jsonl,EVT-0000305,ts,E004_BAD_DATE,2026-01-02T15:07:41Z,2026/02/01 10:00:00
+sales_logs.jsonl,EVT-0000336,qty,E008_BUSINESS_RULE,2,0
+sales_logs.jsonl,EVT-0000743,ts,E004_BAD_DATE,2025-12-28T15:57:28Z,2026/02/01 10:00:00
+sales_logs.jsonl,EVT-0000043,ts,E001_MISSING_REQUIRED,2025-12-23T11:39:38Z,(deleted)
+sales_logs.jsonl,EVT-0001386,status,E003_BAD_ENUM,SUCCESS,UNKNOWN
+sales_logs.jsonl,EVT-0000984,ts,E004_BAD_DATE,2026-01-07T17:38:00Z,2026/02/01 10:00:00
+sales_logs.jsonl,EVT-0000984,(line),E010_MALFORMED_JSON,"{""event_id"":""EVT-0000984"",""ts"":""2026/02/01 10:00:00"",""dealer_id"":42,""product_id"":232,""order_id"":""ORD-20260107-2338"",""event_type"":""SALE"",""qty"":5,""unit_price"":19.98,""currency"":""INR"",""channel"":""WEB"",""user_id"":""u-1676"",""status"":""SUCCESS"",""notes"":""""}","{""event_id"":""EVT-0000984"",""ts"":""2026/02/01 10:00:00"",""dealer_id"":42,""product_id"":232,""order_id"":""ORD-20260107-2338"",""event_type"":""SALE"",""qty"":5,""unit_price"":19.98,""currency"":""INR"",""channel"":""WEB"",""user_id"":""u-1676"",""status"":""SUCCESS"",""notes"":"""""
+sales_logs.jsonl,EVT-0000068,channel,E003_BAD_ENUM,POS,UNKNOWN
+sales_logs.jsonl,EVT-0000070,ts,E004_BAD_DATE,2026-01-27T18:12:53Z,2026/02/01 10:00:00
+sales_logs.jsonl,EVT-0000924,ts,E004_BAD_DATE,2025-12-18T09:56:07Z,2026/02/01 10:00:00
+sales_logs.jsonl,EVT-0000825,qty,E008_BUSINESS_RULE,4,-4
+sales_logs.jsonl,EVT-0000503,qty,E008_BUSINESS_RULE,5,0
+sales_logs.jsonl,EVT-0001012,qty,E008_BUSINESS_RULE,3,-3
+sales_logs.jsonl,EVT-0001311,dealer_id,E006_FK_NOT_FOUND,55,82
+sales_logs.jsonl,EVT-0000686,product_id,E001_MISSING_REQUIRED,97,(deleted)
+sales_logs.jsonl,EVT-0001125,channel,E003_BAD_ENUM,POS,UNKNOWN
+sales_logs.jsonl,EVT-0001125,qty,E008_BUSINESS_RULE,1,0
+sales_logs.jsonl,EVT-0000253,qty,E008_BUSINESS_RULE,2,0
+sales_logs.jsonl,EVT-0001474,dealer_id,E006_FK_NOT_FOUND,48,88
+sales_logs.jsonl,EVT-0000688,event_type,E003_BAD_ENUM,SALE,PURCHASE
+sales_logs.jsonl,EVT-0001434,dealer_id,E001_MISSING_REQUIRED,33,null
+sales_logs.jsonl,EVT-0001460,ts,E001_MISSING_REQUIRED,2026-01-10T10:20:32Z,null
+sales_logs.jsonl,EVT-0000553,product_id,E001_MISSING_REQUIRED,46,null
+sales_logs.jsonl,EVT-0000517,qty,E008_BUSINESS_RULE,-2,0
+sales_logs.jsonl,EVT-0000332,ts,E004_BAD_DATE,2025-12-25T19:16:30Z,2026/02/01 10:00:00
+sales_logs.jsonl,EVT-0001301,ts,E004_BAD_DATE,2026-02-04T11:58:29Z,2026/02/01 10:00:00
+sales_logs.jsonl,EVT-0001315,status,E003_BAD_ENUM,FAILED,UNKNOWN
+sales_logs.jsonl,EVT-0001135,ts,E004_BAD_DATE,2026-01-21T17:01:16Z,2026/02/01 10:00:00
+sales_logs.jsonl,EVT-0000003,ts,E001_MISSING_REQUIRED,2026-01-10T17:19:44Z,null
+sales_logs.jsonl,EVT-0000747,event_type,E003_BAD_ENUM,SALE,PURCHASE
+sales_logs.jsonl,EVT-0001313,qty,E008_BUSINESS_RULE,3,-3
+sales_logs.jsonl,EVT-0000644,channel,E003_BAD_ENUM,POS,UNKNOWN
+sales_logs.jsonl,EVT-0001307,qty,E008_BUSINESS_RULE,8,0
+sales_logs.jsonl,EVT-0000891,qty,E008_BUSINESS_RULE,5,-5
+sales_logs.jsonl,EVT-0001240,product_id,E001_MISSING_REQUIRED,220,null
+sales_logs.jsonl,EVT-0000564,dealer_id,E006_FK_NOT_FOUND,57,84
+sales_logs.jsonl,EVT-0000198,ts,E001_MISSING_REQUIRED,2025-12-16T08:49:50Z,(deleted)
+sales_logs.jsonl,EVT-0000498,qty,E008_BUSINESS_RULE,2,0
+sales_logs.jsonl,EVT-0001273,qty,E008_BUSINESS_RULE,7,-7
+sales_logs.jsonl,EVT-0001142,qty,E008_BUSINESS_RULE,5,-5
+sales_logs.jsonl,EVT-0000722,dealer_id,E001_MISSING_REQUIRED,75,null
+sales_logs.jsonl,EVT-0000737,ts,E004_BAD_DATE,2026-01-11T13:47:03Z,2026/02/01 10:00:00
+sales_logs.jsonl,EVT-0000737,event_type,E003_BAD_ENUM,SALE,PURCHASE
+sales_logs.jsonl,EVT-0000408,dealer_id,E001_MISSING_REQUIRED,57,null
+sales_logs.jsonl,EVT-0000788,qty,E008_BUSINESS_RULE,7,0
+sales_logs.jsonl,EVT-0001065,product_id,E006_FK_NOT_FOUND,21,334
+sales_logs.jsonl,EVT-0001065,ts,E004_BAD_DATE,2026-01-08T10:22:50Z,2026/02/01 10:00:00
+sales_logs.jsonl,EVT-0000593,qty,E008_BUSINESS_RULE,3,-3
+sales_logs.jsonl,EVT-0001014,product_id,E006_FK_NOT_FOUND,87,323
+sales_logs.jsonl,EVT-0000758,ts,E001_MISSING_REQUIRED,2026-01-06T10:33:22Z,null
+sales_logs.jsonl,EVT-0000210,qty,E008_BUSINESS_RULE,-5,5
+sales_logs.jsonl,EVT-0000980,ts,E004_BAD_DATE,2026-01-19T13:23:06Z,2026/02/01 10:00:00
