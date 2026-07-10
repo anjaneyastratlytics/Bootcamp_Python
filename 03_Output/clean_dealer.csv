@@ -1,0 +1,37 @@
+dealer_id,dealer_code,dealer_name,city,state,region,dealer_type,created_date,is_active,email,phone,credit_terms_days
+1,DLR-00001,Coimbatore Auto Parts - 1,Coimbatore,TN,SOUTH,RETAIL,2024-08-11,true,dealer1@example.com,+91-9855165986,30
+2,DLR-00002,Visakhapatnam Auto Parts - 2,Visakhapatnam,AP,SOUTH,RETAIL,2024-07-08,true,dealer2@example.com,+91-9873220829,0
+3,DLR-00003,New Delhi Auto Parts - 3,New Delhi,DL,NORTH,WHOLESALE,2024-04-14,true,dealer3@example.com,+91-9858395690,15
+4,DLR-00004,Kochi Auto Parts - 4,Kochi,KL,SOUTH,RETAIL,2024-07-31,true,dealer4@example.com,+91-9026574735,0
+5,DLR-00005,Noida Auto Parts - 5,Noida,UP,NORTH,RETAIL,2024-05-08,true,dealer5@example.com,+91-9143969704,45
+6,DLR-00006,Bengaluru Auto Parts - 6,Bengaluru,KA,SOUTH,RETAIL,2023-10-30,true,dealer6@example.com,+91-9924370396,30
+7,DLR-00007,Bengaluru Auto Parts - 7,Bengaluru,KA,SOUTH,RETAIL,2025-08-25,true,dealer7@example.com,+91-9339737063,30
+8,DLR-00008,Bhubaneswar Auto Parts - 8,Bhubaneswar,OR,EAST,RETAIL,2024-01-23,true,dealer8@example.com,+91-9674471794,30
+9,DLR-00009,Nagpur Auto Parts - 9,Nagpur,MH,WEST,WHOLESALE,2023-08-18,true,dealer9@example.com,+91-9674926360,45
+10,DLR-00010,Kochi Auto Parts - 10,Kochi,KL,SOUTH,RETAIL,2023-04-08,true,dealer10@example.com,+91-9805839586,15
+11,DLR-00011,Ahmedabad Auto Parts - 11,Ahmedabad,GJ,WEST,RETAIL,2023-10-18,true,dealer11@example.com,+91-9396083138,30
+12,DLR-00012,Kolkata Auto Parts - 12,Kolkata,WB,EAST,RETAIL,2023-09-27,true,dealer12@example.com,+91-9909292972,60
+13,DLR-00013,Bengaluru Auto Parts - 13,Bengaluru,KA,SOUTH,RETAIL,2025-10-17,true,dealer13@example.com,+91-9935648051,15
+14,DLR-00014,New Delhi Auto Parts - 14,New Delhi,DL,NORTH,RETAIL,2025-03-25,true,dealer14@example.com,+91-9242909733,60
+15,DLR-00015,Mysuru Auto Parts - 15,Mysuru,KA,SOUTH,WHOLESALE,2024-09-25,false,dealer15@example.com,+91-9343755909,30
+16,DLR-00016,Visakhapatnam Auto Parts - 16,Visakhapatnam,AP,SOUTH,WHOLESALE,2025-07-28,true,dealer16@example.com,+91-9207093849,30
+17,DLR-00017,Mysuru Auto Parts - 17,Mysuru,KA,SOUTH,RETAIL,2025-10-30,true,dealer17@example.com,+91-9305169545,45
+18,DLR-00018,Bhubaneswar Auto Parts - 18,Bhubaneswar,OR,EAST,SHOP,2024-07-11,true,dealer18@example.com,+91-9803805383,30
+19,DLR-00019,Kochi Auto Parts - 19,Kochi,KL,SOUTH,RETAIL,2025-06-09,false,dealer19@example.com,+91-9913135360,45
+20,DLR-00020,Hyderabad Auto Parts - 20,Hyderabad,TG,SOUTH,RETAIL,2024-03-14,true,dealer20@example.com,+91-9143034094,30
+21,DLR-00021,New Delhi Auto Parts - 21,New Delhi,DL,NORTH,WHOLESALE,2023-04-26,true,dealer21@example.com,+91-9045191366,30
+22,DLR-00022,Ahmedabad Auto Parts - 22,Ahmedabad,GJ,WEST,RETAIL,2025-10-22,true,dealer22@example.com,+91-9728020343,45
+23,DLR-00023,Lucknow Auto Parts - 23,Lucknow,UP,NORTH,RETAIL,2025-05-24,true,dealer23@example.com,+91-9006056114,0
+24,DLR-00024,Jaipur Auto Parts - 24,Jaipur,RJ,NORTH,RETAIL,2024-03-28,true,dealer24@example.com,+91-9163411183,30
+25,DLR-00025,Kolkata Auto Parts - 25,Kolkata,WB,EAST,RETAIL,2023-01-13,true,dealer25@example.com,+91-9723001023,15
+26,DLR-00026,Visakhapatnam Auto Parts - 26,Visakhapatnam,AP,SOUTH,RETAIL,2023-06-05,true,dealer26@example.com,+91-9928593292,30
+27,DLR-00010,Coimbatore Auto Parts - 27,Coimbatore,TN,SOUTH,RETAIL,2023-02-20,true,dealer27@example.com,+91-9621617457,30
+28,DLR-00028,Hyderabad Auto Parts - 28,Hyderabad,TG,SOUTH,RETAIL,2023-02-16,true,dealer28@example.com,+91-9280978195,30
+29,DLR-00029,Bhubaneswar Auto Parts - 29,Bhubaneswar,OR,EAST,RETAIL,2023-11-05,true,dealer29@example.com,+91-9296742076,45
+30,DLR-00030,Noida Auto Parts - 30,Noida,UP,NORTH,RETAIL,2024-03-23,false,dealer30@example.com,+91-9960875357,60
+31,DLR-00031,Kochi Auto Parts - 31,Kochi,KL,SOUTH,RETAIL,2024-03-24,true,dealer31@example.com,+91-9441537892,45
+32,DLR-00032,Hyderabad Auto Parts - 32,Hyderabad,TG,SOUTH,RETAIL,2025-11-29,false,dealer32@example.com,+91-9674236144,30
+33,DLR-00033,New Delhi Auto Parts - 33,New Delhi,DL,NORTH,RETAIL,2025-09-25,true,dealer33@example.com,+91-9977612867,15
+34,DLR-00034,Jaipur Auto Parts - 34,Jaipur,RJ,NORTH,RETAIL,2023-01-04,true,dealer34@example.com,+91-9114470862,30
+35,DLR-00035,Kolkata Auto Parts - 35,Kolkata,WB,EAST,WHOLESALE,2023-10-05,true,dealer35@example.com,+91-9298621700,30
+36,DLR-00036,Cuttack Auto Parts - 36,Cuttack,OR,EAST,WHOLESALE,2024-02-05,true,dealer36@example.com,+91-9077267672,60
