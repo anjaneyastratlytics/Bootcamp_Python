@@ -1,0 +1,31 @@
+{
+    "total rows": 900,
+    "valid count": 567,
+    "reject count": 333,
+    "error_summary": {
+        "E001": {
+            "desc": "Missing required Field",
+            "count": 0
+        },
+        "E002": {
+            "desc": "Invalid quantity type",
+            "count": 103
+        },
+        "E003": {
+            "desc": "Invalid date format",
+            "count": 230
+        },
+        "E004": {
+            "desc": "Negative Quantity",
+            "count": 28
+        },
+        "E005": {
+            "desc": "Invalid product_id",
+            "count": 4
+        },
+        "E006": {
+            "desc": "Invalid dealer_id",
+            "count": 3
+        }
+    }
+}
