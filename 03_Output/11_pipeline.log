@@ -1,0 +1,200 @@
+2026-07-19 21:35:15,188 INFO Downloading | dirty/dealer.csv from raw-bucket-427763921511-ap-south-1-an
+2026-07-19 21:35:15,188 INFO Connecting to AWS S3...
+2026-07-19 21:35:15,473 INFO Connection Successful
+2026-07-19 21:35:16,319 INFO Download Successful | Saved to C:/Users/KIIT/Desktop/Stratlytics/02_Bootcamp/04_Python/03_Output/12_dirty_dealer.csv
+2026-07-19 21:35:16,322 INFO Reading File | 12_dirty_dealer.csv
+2026-07-19 21:35:16,353 INFO Reading Successful
+2026-07-19 21:35:16,356 INFO Normalizing Null Values
+2026-07-19 21:35:16,357 INFO Validating row | Row Number: 1 | dealer_id: 1
+2026-07-19 21:35:16,363 INFO No errors found
+2026-07-19 21:35:16,363 INFO Validating row | Row Number: 2 | dealer_id: 2
+2026-07-19 21:35:16,363 INFO No errors found
+2026-07-19 21:35:16,363 INFO Validating row | Row Number: 3 | dealer_id: 3
+2026-07-19 21:35:16,363 INFO No errors found
+2026-07-19 21:35:16,363 INFO Validating row | Row Number: 4 | dealer_id: 4
+2026-07-19 21:35:16,366 INFO No errors found
+2026-07-19 21:35:16,366 INFO Validating row | Row Number: 5 | dealer_id: 5
+2026-07-19 21:35:16,366 INFO No errors found
+2026-07-19 21:35:16,366 INFO Validating row | Row Number: 6 | dealer_id: 6
+2026-07-19 21:35:16,366 INFO No errors found
+2026-07-19 21:35:16,366 INFO Validating row | Row Number: 7 | dealer_id: 7
+2026-07-19 21:35:16,366 INFO No errors found
+2026-07-19 21:35:16,366 INFO Validating row | Row Number: 8 | dealer_id: 8
+2026-07-19 21:35:16,366 INFO No errors found
+2026-07-19 21:35:16,366 INFO Validating row | Row Number: 9 | dealer_id: 9
+2026-07-19 21:35:16,366 INFO No errors found
+2026-07-19 21:35:16,366 INFO Validating row | Row Number: 10 | dealer_id: 10
+2026-07-19 21:35:16,366 INFO No errors found
+2026-07-19 21:35:16,366 INFO Validating row | Row Number: 11 | dealer_id: 11
+2026-07-19 21:35:16,366 INFO No errors found
+2026-07-19 21:35:16,366 INFO Validating row | Row Number: 12 | dealer_id: 12
+2026-07-19 21:35:16,366 INFO No errors found
+2026-07-19 21:35:16,366 INFO Validating row | Row Number: 13 | dealer_id: 13
+2026-07-19 21:35:16,366 INFO No errors found
+2026-07-19 21:35:16,366 INFO Validating row | Row Number: 14 | dealer_id: 14
+2026-07-19 21:35:16,366 INFO No errors found
+2026-07-19 21:35:16,366 INFO Validating row | Row Number: 15 | dealer_id: 15
+2026-07-19 21:35:16,366 INFO No errors found
+2026-07-19 21:35:16,366 INFO Validating row | Row Number: 16 | dealer_id: 16
+2026-07-19 21:35:16,366 INFO No errors found
+2026-07-19 21:35:16,366 INFO Validating row | Row Number: 17 | dealer_id: 17
+2026-07-19 21:35:16,366 INFO No errors found
+2026-07-19 21:35:16,366 INFO Validating row | Row Number: 18 | dealer_id: 18
+2026-07-19 21:35:16,366 INFO No errors found
+2026-07-19 21:35:16,366 INFO Validating row | Row Number: 19 | dealer_id: 19
+2026-07-19 21:35:16,366 INFO No errors found
+2026-07-19 21:35:16,366 INFO Validating row | Row Number: 20 | dealer_id: 20
+2026-07-19 21:35:16,366 INFO No errors found
+2026-07-19 21:35:16,366 INFO Validating row | Row Number: 21 | dealer_id: 21
+2026-07-19 21:35:16,369 INFO No errors found
+2026-07-19 21:35:16,369 INFO Validating row | Row Number: 22 | dealer_id: 22
+2026-07-19 21:35:16,369 INFO No errors found
+2026-07-19 21:35:16,369 INFO Validating row | Row Number: 23 | dealer_id: 23
+2026-07-19 21:35:16,369 INFO No errors found
+2026-07-19 21:35:16,369 INFO Validating row | Row Number: 24 | dealer_id: 24
+2026-07-19 21:35:16,369 INFO No errors found
+2026-07-19 21:35:16,369 INFO Validating row | Row Number: 25 | dealer_id: 25
+2026-07-19 21:35:16,369 INFO No errors found
+2026-07-19 21:35:16,369 INFO Validating row | Row Number: 26 | dealer_id: 26
+2026-07-19 21:35:16,369 INFO No errors found
+2026-07-19 21:35:16,371 INFO Validating row | Row Number: 27 | dealer_id: 27
+2026-07-19 21:35:16,371 INFO No errors found
+2026-07-19 21:35:16,371 INFO Validating row | Row Number: 28 | dealer_id: 28
+2026-07-19 21:35:16,371 INFO No errors found
+2026-07-19 21:35:16,371 INFO Validating row | Row Number: 29 | dealer_id: 29
+2026-07-19 21:35:16,371 INFO No errors found
+2026-07-19 21:35:16,371 INFO Validating row | Row Number: 30 | dealer_id: 30
+2026-07-19 21:35:16,371 INFO No errors found
+2026-07-19 21:35:16,372 INFO Validating row | Row Number: 31 | dealer_id: 31
+2026-07-19 21:35:16,372 INFO No errors found
+2026-07-19 21:35:16,372 INFO Validating row | Row Number: 32 | dealer_id: 32
+2026-07-19 21:35:16,372 INFO No errors found
+2026-07-19 21:35:16,372 INFO Validating row | Row Number: 33 | dealer_id: 33
+2026-07-19 21:35:16,372 INFO No errors found
+2026-07-19 21:35:16,372 INFO Validating row | Row Number: 34 | dealer_id: 34
+2026-07-19 21:35:16,372 INFO No errors found
+2026-07-19 21:35:16,372 INFO Validating row | Row Number: 35 | dealer_id: 35
+2026-07-19 21:35:16,372 INFO No errors found
+2026-07-19 21:35:16,372 INFO Validating row | Row Number: 36 | dealer_id: 36
+2026-07-19 21:35:16,372 INFO No errors found
+2026-07-19 21:35:16,372 INFO Validating row | Row Number: 37 | dealer_id: 37
+2026-07-19 21:35:16,372 ERROR Errors found: ['Missing Required Field (dealer_name)']
+2026-07-19 21:35:16,372 INFO Validating row | Row Number: 38 | dealer_id: 38
+2026-07-19 21:35:16,372 INFO No errors found
+2026-07-19 21:35:16,372 INFO Validating row | Row Number: 39 | dealer_id: 39
+2026-07-19 21:35:16,372 INFO No errors found
+2026-07-19 21:35:16,372 INFO Validating row | Row Number: 40 | dealer_id: 40
+2026-07-19 21:35:16,376 INFO No errors found
+2026-07-19 21:35:16,376 INFO Validating row | Row Number: 41 | dealer_id: 41
+2026-07-19 21:35:16,376 INFO No errors found
+2026-07-19 21:35:16,377 INFO Validating row | Row Number: 42 | dealer_id: 42
+2026-07-19 21:35:16,377 INFO No errors found
+2026-07-19 21:35:16,377 INFO Validating row | Row Number: 43 | dealer_id: 43
+2026-07-19 21:35:16,377 INFO No errors found
+2026-07-19 21:35:16,377 INFO Validating row | Row Number: 44 | dealer_id: 44
+2026-07-19 21:35:16,379 INFO No errors found
+2026-07-19 21:35:16,379 INFO Validating row | Row Number: 45 | dealer_id: 45
+2026-07-19 21:35:16,379 INFO No errors found
+2026-07-19 21:35:16,379 INFO Validating row | Row Number: 46 | dealer_id: 46
+2026-07-19 21:35:16,379 INFO No errors found
+2026-07-19 21:35:16,379 INFO Validating row | Row Number: 47 | dealer_id: 47
+2026-07-19 21:35:16,379 INFO No errors found
+2026-07-19 21:35:16,379 INFO Validating row | Row Number: 48 | dealer_id: 48
+2026-07-19 21:35:16,379 INFO No errors found
+2026-07-19 21:35:16,379 INFO Validating row | Row Number: 49 | dealer_id: 49
+2026-07-19 21:35:16,379 INFO No errors found
+2026-07-19 21:35:16,379 INFO Validating row | Row Number: 50 | dealer_id: 50
+2026-07-19 21:35:16,379 INFO No errors found
+2026-07-19 21:35:16,379 INFO Validating row | Row Number: 51 | dealer_id: 51
+2026-07-19 21:35:16,379 INFO No errors found
+2026-07-19 21:35:16,379 INFO Validating row | Row Number: 52 | dealer_id: 52
+2026-07-19 21:35:16,379 INFO No errors found
+2026-07-19 21:35:16,379 INFO Validating row | Row Number: 53 | dealer_id: 53
+2026-07-19 21:35:16,379 INFO No errors found
+2026-07-19 21:35:16,379 INFO Validating row | Row Number: 54 | dealer_id: 54
+2026-07-19 21:35:16,379 INFO No errors found
+2026-07-19 21:35:16,379 INFO Validating row | Row Number: 55 | dealer_id: 55
+2026-07-19 21:35:16,379 INFO No errors found
+2026-07-19 21:35:16,379 INFO Validating row | Row Number: 56 | dealer_id: 56
+2026-07-19 21:35:16,379 INFO No errors found
+2026-07-19 21:35:16,379 INFO Validating row | Row Number: 57 | dealer_id: 57
+2026-07-19 21:35:16,379 INFO No errors found
+2026-07-19 21:35:16,379 INFO Validating row | Row Number: 58 | dealer_id: 58
+2026-07-19 21:35:16,379 INFO No errors found
+2026-07-19 21:35:16,379 INFO Validating row | Row Number: 59 | dealer_id: 59
+2026-07-19 21:35:16,379 INFO No errors found
+2026-07-19 21:35:16,383 INFO Validating row | Row Number: 60 | dealer_id: 60
+2026-07-19 21:35:16,383 INFO No errors found
+2026-07-19 21:35:16,383 INFO Validating row | Row Number: 61 | dealer_id: 61
+2026-07-19 21:35:16,383 INFO No errors found
+2026-07-19 21:35:16,383 INFO Validating row | Row Number: 62 | dealer_id: 62
+2026-07-19 21:35:16,383 INFO No errors found
+2026-07-19 21:35:16,383 INFO Validating row | Row Number: 63 | dealer_id: 63
+2026-07-19 21:35:16,383 INFO No errors found
+2026-07-19 21:35:16,383 INFO Validating row | Row Number: 64 | dealer_id: 64
+2026-07-19 21:35:16,383 INFO No errors found
+2026-07-19 21:35:16,383 INFO Validating row | Row Number: 65 | dealer_id: 65
+2026-07-19 21:35:16,383 INFO No errors found
+2026-07-19 21:35:16,383 INFO Validating row | Row Number: 66 | dealer_id: 66
+2026-07-19 21:35:16,383 INFO No errors found
+2026-07-19 21:35:16,383 INFO Validating row | Row Number: 67 | dealer_id: 67
+2026-07-19 21:35:16,383 INFO No errors found
+2026-07-19 21:35:16,383 INFO Validating row | Row Number: 68 | dealer_id: 68
+2026-07-19 21:35:16,383 INFO No errors found
+2026-07-19 21:35:16,385 INFO Validating row | Row Number: 69 | dealer_id: 69
+2026-07-19 21:35:16,385 INFO No errors found
+2026-07-19 21:35:16,386 INFO Validating row | Row Number: 70 | dealer_id: 70
+2026-07-19 21:35:16,386 INFO No errors found
+2026-07-19 21:35:16,386 INFO Validating row | Row Number: 71 | dealer_id: 71
+2026-07-19 21:35:16,386 INFO No errors found
+2026-07-19 21:35:16,386 INFO Validating row | Row Number: 72 | dealer_id: 72
+2026-07-19 21:35:16,386 INFO No errors found
+2026-07-19 21:35:16,386 INFO Validating row | Row Number: 73 | dealer_id: 73
+2026-07-19 21:35:16,386 INFO No errors found
+2026-07-19 21:35:16,386 INFO Validating row | Row Number: 74 | dealer_id: 74
+2026-07-19 21:35:16,386 INFO No errors found
+2026-07-19 21:35:16,386 INFO Validating row | Row Number: 75 | dealer_id: 75
+2026-07-19 21:35:16,386 INFO No errors found
+2026-07-19 21:35:16,386 INFO Validating row | Row Number: 76 | dealer_id: 76
+2026-07-19 21:35:16,386 INFO No errors found
+2026-07-19 21:35:16,386 INFO Validating row | Row Number: 77 | dealer_id: 77
+2026-07-19 21:35:16,386 INFO No errors found
+2026-07-19 21:35:16,388 INFO Validating row | Row Number: 78 | dealer_id: 78
+2026-07-19 21:35:16,388 INFO No errors found
+2026-07-19 21:35:16,388 INFO Validating row | Row Number: 79 | dealer_id: 79
+2026-07-19 21:35:16,388 INFO No errors found
+2026-07-19 21:35:16,388 INFO Validating row | Row Number: 80 | dealer_id: 80
+2026-07-19 21:35:16,388 INFO No errors found
+2026-07-19 21:35:16,388 INFO Validation Summary:
+1. Total rows processed = 80
+2. Clean rows = 79 (98.75 %)
+3. Reject rows = 1 (1.25 %)
+4. Error Summary:
+{
+    "E001": {
+        "description": "Missing Required Fields",
+        "count": 1
+    },
+    "E002": {
+        "description": "Invalid Integer Field(s) Type",
+        "count": 0
+    },
+    "E003": {
+        "description": "Invalid Date Field(s) Format",
+        "count": 0
+    },
+    "E004": {
+        "description": "Invalid Region Value",
+        "count": 0
+    }
+}
+2026-07-19 21:35:16,390 INFO Saving Processed files | Clean file: C:/Users/KIIT/Desktop/Stratlytics/02_Bootcamp/04_Python/03_Output/13_clean_dealer.csv | Reject file: C:/Users/KIIT/Desktop/Stratlytics/02_Bootcamp/04_Python/03_Output/14_reject_dealer.csv
+2026-07-19 21:35:16,393 INFO Saving Successful
+2026-07-19 21:35:16,393 INFO Uploading | C:/Users/KIIT/Desktop/Stratlytics/02_Bootcamp/04_Python/03_Output/13_clean_dealer.csv
+2026-07-19 21:35:16,393 INFO Connecting to AWS S3...
+2026-07-19 21:35:16,416 INFO Connection Successful
+2026-07-19 21:35:17,363 INFO Upload Successful | Saved as processed/clean/dealer.csv in raw-bucket-427763921511-ap-south-1-an
+2026-07-19 21:35:17,366 INFO Uploading | C:/Users/KIIT/Desktop/Stratlytics/02_Bootcamp/04_Python/03_Output/14_reject_dealer.csv
+2026-07-19 21:35:17,366 INFO Connecting to AWS S3...
+2026-07-19 21:35:17,366 INFO Connection Successful
+2026-07-19 21:35:18,160 INFO Upload Successful | Saved as processed/reject/dealer.csv in raw-bucket-427763921511-ap-south-1-an
