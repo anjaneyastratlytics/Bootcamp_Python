@@ -88,7 +88,7 @@ def execute_query(query,mode,values=(),rows_list=[]):
         
 def main():
     # File Paths
-    root_path = "C:/Users/KIIT/Desktop/Stratlytics/02_Bootcamp/04_Python/"
+    root_path = "/home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/"
     file_path = root_path + "01_Data/clean/dealer.csv"
     # Read file
     rows_list = read_csv(file_path)

@@ -1,0 +1,8 @@
+{
+    "job_name": "dealer_load",
+    "total_rows": 80,
+    "inserted_rows": 80,
+    "rejected_rows": 0,
+    "status": "Success",
+    "run_timestamp": "2026-07-28T19:25:31.457095"
+}
