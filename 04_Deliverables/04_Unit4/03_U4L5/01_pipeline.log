@@ -1,0 +1,226 @@
+2026-07-29 19:17:39,369 INFO [Main] 
+
+-------------------- Pipeline Started --------------------
+
+2026-07-29 19:17:39,370 INFO [Ingest] Downloading | dirty/dealer.csv from raw-bucket-427763921511-ap-south-1-an
+2026-07-29 19:17:39,370 INFO [Ingest] Connecting to AWS S3...
+2026-07-29 19:17:39,510 INFO [Ingest] Connection Successful
+2026-07-29 19:17:39,862 INFO [Ingest] Download Successful | Saved to /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/04_Deliverables/04_Unit4/03_U4L5/02_dirty_dealer.csv
+2026-07-29 19:17:39,863 INFO [Ingest] Reading File | 02_dirty_dealer.csv
+2026-07-29 19:17:39,863 INFO [Ingest] Hash Created: 06a774cc887a598952eb0b915ea26409c049c6724c992d3d32a1617fe21e90b9
+2026-07-29 19:17:39,863 INFO [Ingest] Checking if file processed earlier...
+2026-07-29 19:17:39,863 INFO [Ingest] Connecting to Database...
+2026-07-29 19:17:39,883 INFO [Ingest] Connection Successful...
+2026-07-29 19:17:39,884 INFO [Ingest] Executing Query | SELECT 1 FROM load_tracking WHERE file_hash = %s
+2026-07-29 19:17:39,885 INFO [Ingest] File not processed
+2026-07-29 19:17:39,885 INFO [Ingest] Reading File | 02_dirty_dealer.csv
+2026-07-29 19:17:39,886 INFO [Ingest] Reading Successful
+2026-07-29 19:17:39,886 INFO [Transform] Normalizing Null Values
+2026-07-29 19:17:39,887 INFO [Transform] Validating row | Row Number: 1 | dealer_id: 1
+2026-07-29 19:17:39,889 INFO [Transform] No errors found
+2026-07-29 19:17:39,890 INFO [Transform] Validating row | Row Number: 2 | dealer_id: 2
+2026-07-29 19:17:39,890 INFO [Transform] No errors found
+2026-07-29 19:17:39,890 INFO [Transform] Validating row | Row Number: 3 | dealer_id: 3
+2026-07-29 19:17:39,890 INFO [Transform] No errors found
+2026-07-29 19:17:39,890 INFO [Transform] Validating row | Row Number: 4 | dealer_id: 4
+2026-07-29 19:17:39,890 INFO [Transform] No errors found
+2026-07-29 19:17:39,890 INFO [Transform] Validating row | Row Number: 5 | dealer_id: 5
+2026-07-29 19:17:39,891 INFO [Transform] No errors found
+2026-07-29 19:17:39,891 INFO [Transform] Validating row | Row Number: 6 | dealer_id: 6
+2026-07-29 19:17:39,891 INFO [Transform] No errors found
+2026-07-29 19:17:39,891 INFO [Transform] Validating row | Row Number: 7 | dealer_id: 7
+2026-07-29 19:17:39,891 INFO [Transform] No errors found
+2026-07-29 19:17:39,891 INFO [Transform] Validating row | Row Number: 8 | dealer_id: 8
+2026-07-29 19:17:39,891 INFO [Transform] No errors found
+2026-07-29 19:17:39,891 INFO [Transform] Validating row | Row Number: 9 | dealer_id: 9
+2026-07-29 19:17:39,891 INFO [Transform] No errors found
+2026-07-29 19:17:39,891 INFO [Transform] Validating row | Row Number: 10 | dealer_id: 10
+2026-07-29 19:17:39,892 INFO [Transform] No errors found
+2026-07-29 19:17:39,892 INFO [Transform] Validating row | Row Number: 11 | dealer_id: 11
+2026-07-29 19:17:39,892 INFO [Transform] No errors found
+2026-07-29 19:17:39,892 INFO [Transform] Validating row | Row Number: 12 | dealer_id: 12
+2026-07-29 19:17:39,892 INFO [Transform] No errors found
+2026-07-29 19:17:39,892 INFO [Transform] Validating row | Row Number: 13 | dealer_id: 13
+2026-07-29 19:17:39,892 INFO [Transform] No errors found
+2026-07-29 19:17:39,893 INFO [Transform] Validating row | Row Number: 14 | dealer_id: 14
+2026-07-29 19:17:39,893 INFO [Transform] No errors found
+2026-07-29 19:17:39,893 INFO [Transform] Validating row | Row Number: 15 | dealer_id: 15
+2026-07-29 19:17:39,893 INFO [Transform] No errors found
+2026-07-29 19:17:39,893 INFO [Transform] Validating row | Row Number: 16 | dealer_id: 16
+2026-07-29 19:17:39,893 INFO [Transform] No errors found
+2026-07-29 19:17:39,893 INFO [Transform] Validating row | Row Number: 17 | dealer_id: 17
+2026-07-29 19:17:39,893 INFO [Transform] No errors found
+2026-07-29 19:17:39,893 INFO [Transform] Validating row | Row Number: 18 | dealer_id: 18
+2026-07-29 19:17:39,893 INFO [Transform] No errors found
+2026-07-29 19:17:39,893 INFO [Transform] Validating row | Row Number: 19 | dealer_id: 19
+2026-07-29 19:17:39,893 INFO [Transform] No errors found
+2026-07-29 19:17:39,893 INFO [Transform] Validating row | Row Number: 20 | dealer_id: 20
+2026-07-29 19:17:39,893 INFO [Transform] No errors found
+2026-07-29 19:17:39,893 INFO [Transform] Validating row | Row Number: 21 | dealer_id: 21
+2026-07-29 19:17:39,893 INFO [Transform] No errors found
+2026-07-29 19:17:39,893 INFO [Transform] Validating row | Row Number: 22 | dealer_id: 22
+2026-07-29 19:17:39,893 INFO [Transform] No errors found
+2026-07-29 19:17:39,893 INFO [Transform] Validating row | Row Number: 23 | dealer_id: 23
+2026-07-29 19:17:39,893 INFO [Transform] No errors found
+2026-07-29 19:17:39,894 INFO [Transform] Validating row | Row Number: 24 | dealer_id: 24
+2026-07-29 19:17:39,894 INFO [Transform] No errors found
+2026-07-29 19:17:39,894 INFO [Transform] Validating row | Row Number: 25 | dealer_id: 25
+2026-07-29 19:17:39,894 INFO [Transform] No errors found
+2026-07-29 19:17:39,894 INFO [Transform] Validating row | Row Number: 26 | dealer_id: 26
+2026-07-29 19:17:39,894 INFO [Transform] No errors found
+2026-07-29 19:17:39,894 INFO [Transform] Validating row | Row Number: 27 | dealer_id: 27
+2026-07-29 19:17:39,894 INFO [Transform] No errors found
+2026-07-29 19:17:39,894 INFO [Transform] Validating row | Row Number: 28 | dealer_id: 28
+2026-07-29 19:17:39,894 INFO [Transform] No errors found
+2026-07-29 19:17:39,894 INFO [Transform] Validating row | Row Number: 29 | dealer_id: 29
+2026-07-29 19:17:39,894 INFO [Transform] No errors found
+2026-07-29 19:17:39,894 INFO [Transform] Validating row | Row Number: 30 | dealer_id: 30
+2026-07-29 19:17:39,894 INFO [Transform] No errors found
+2026-07-29 19:17:39,894 INFO [Transform] Validating row | Row Number: 31 | dealer_id: 31
+2026-07-29 19:17:39,894 INFO [Transform] No errors found
+2026-07-29 19:17:39,894 INFO [Transform] Validating row | Row Number: 32 | dealer_id: 32
+2026-07-29 19:17:39,894 INFO [Transform] No errors found
+2026-07-29 19:17:39,894 INFO [Transform] Validating row | Row Number: 33 | dealer_id: 33
+2026-07-29 19:17:39,894 INFO [Transform] No errors found
+2026-07-29 19:17:39,894 INFO [Transform] Validating row | Row Number: 34 | dealer_id: 34
+2026-07-29 19:17:39,895 INFO [Transform] No errors found
+2026-07-29 19:17:39,895 INFO [Transform] Validating row | Row Number: 35 | dealer_id: 35
+2026-07-29 19:17:39,895 INFO [Transform] No errors found
+2026-07-29 19:17:39,895 INFO [Transform] Validating row | Row Number: 36 | dealer_id: 36
+2026-07-29 19:17:39,895 INFO [Transform] No errors found
+2026-07-29 19:17:39,895 INFO [Transform] Validating row | Row Number: 37 | dealer_id: 37
+2026-07-29 19:17:39,895 ERROR [Transform] Errors found: ['Missing Required Field (dealer_name)']
+2026-07-29 19:17:39,895 INFO [Transform] Validating row | Row Number: 38 | dealer_id: 38
+2026-07-29 19:17:39,895 INFO [Transform] No errors found
+2026-07-29 19:17:39,895 INFO [Transform] Validating row | Row Number: 39 | dealer_id: 39
+2026-07-29 19:17:39,895 INFO [Transform] No errors found
+2026-07-29 19:17:39,895 INFO [Transform] Validating row | Row Number: 40 | dealer_id: 40
+2026-07-29 19:17:39,895 INFO [Transform] No errors found
+2026-07-29 19:17:39,895 INFO [Transform] Validating row | Row Number: 41 | dealer_id: 41
+2026-07-29 19:17:39,895 INFO [Transform] No errors found
+2026-07-29 19:17:39,895 INFO [Transform] Validating row | Row Number: 42 | dealer_id: 42
+2026-07-29 19:17:39,895 INFO [Transform] No errors found
+2026-07-29 19:17:39,895 INFO [Transform] Validating row | Row Number: 43 | dealer_id: 43
+2026-07-29 19:17:39,895 INFO [Transform] No errors found
+2026-07-29 19:17:39,895 INFO [Transform] Validating row | Row Number: 44 | dealer_id: 44
+2026-07-29 19:17:39,896 INFO [Transform] No errors found
+2026-07-29 19:17:39,896 INFO [Transform] Validating row | Row Number: 45 | dealer_id: 45
+2026-07-29 19:17:39,896 INFO [Transform] No errors found
+2026-07-29 19:17:39,896 INFO [Transform] Validating row | Row Number: 46 | dealer_id: 46
+2026-07-29 19:17:39,896 INFO [Transform] No errors found
+2026-07-29 19:17:39,896 INFO [Transform] Validating row | Row Number: 47 | dealer_id: 47
+2026-07-29 19:17:39,896 INFO [Transform] No errors found
+2026-07-29 19:17:39,896 INFO [Transform] Validating row | Row Number: 48 | dealer_id: 48
+2026-07-29 19:17:39,896 INFO [Transform] No errors found
+2026-07-29 19:17:39,896 INFO [Transform] Validating row | Row Number: 49 | dealer_id: 49
+2026-07-29 19:17:39,896 INFO [Transform] No errors found
+2026-07-29 19:17:39,896 INFO [Transform] Validating row | Row Number: 50 | dealer_id: 50
+2026-07-29 19:17:39,896 INFO [Transform] No errors found
+2026-07-29 19:17:39,896 INFO [Transform] Validating row | Row Number: 51 | dealer_id: 51
+2026-07-29 19:17:39,896 INFO [Transform] No errors found
+2026-07-29 19:17:39,896 INFO [Transform] Validating row | Row Number: 52 | dealer_id: 52
+2026-07-29 19:17:39,896 INFO [Transform] No errors found
+2026-07-29 19:17:39,896 INFO [Transform] Validating row | Row Number: 53 | dealer_id: 53
+2026-07-29 19:17:39,896 INFO [Transform] No errors found
+2026-07-29 19:17:39,896 INFO [Transform] Validating row | Row Number: 54 | dealer_id: 54
+2026-07-29 19:17:39,897 INFO [Transform] No errors found
+2026-07-29 19:17:39,897 INFO [Transform] Validating row | Row Number: 55 | dealer_id: 55
+2026-07-29 19:17:39,897 INFO [Transform] No errors found
+2026-07-29 19:17:39,897 INFO [Transform] Validating row | Row Number: 56 | dealer_id: 56
+2026-07-29 19:17:39,897 INFO [Transform] No errors found
+2026-07-29 19:17:39,897 INFO [Transform] Validating row | Row Number: 57 | dealer_id: 57
+2026-07-29 19:17:39,897 INFO [Transform] No errors found
+2026-07-29 19:17:39,897 INFO [Transform] Validating row | Row Number: 58 | dealer_id: 58
+2026-07-29 19:17:39,897 INFO [Transform] No errors found
+2026-07-29 19:17:39,897 INFO [Transform] Validating row | Row Number: 59 | dealer_id: 59
+2026-07-29 19:17:39,897 INFO [Transform] No errors found
+2026-07-29 19:17:39,897 INFO [Transform] Validating row | Row Number: 60 | dealer_id: 60
+2026-07-29 19:17:39,897 INFO [Transform] No errors found
+2026-07-29 19:17:39,897 INFO [Transform] Validating row | Row Number: 61 | dealer_id: 61
+2026-07-29 19:17:39,897 INFO [Transform] No errors found
+2026-07-29 19:17:39,897 INFO [Transform] Validating row | Row Number: 62 | dealer_id: 62
+2026-07-29 19:17:39,897 INFO [Transform] No errors found
+2026-07-29 19:17:39,897 INFO [Transform] Validating row | Row Number: 63 | dealer_id: 63
+2026-07-29 19:17:39,897 INFO [Transform] No errors found
+2026-07-29 19:17:39,897 INFO [Transform] Validating row | Row Number: 64 | dealer_id: 64
+2026-07-29 19:17:39,898 INFO [Transform] No errors found
+2026-07-29 19:17:39,898 INFO [Transform] Validating row | Row Number: 65 | dealer_id: 65
+2026-07-29 19:17:39,898 INFO [Transform] No errors found
+2026-07-29 19:17:39,898 INFO [Transform] Validating row | Row Number: 66 | dealer_id: 66
+2026-07-29 19:17:39,898 INFO [Transform] No errors found
+2026-07-29 19:17:39,898 INFO [Transform] Validating row | Row Number: 67 | dealer_id: 67
+2026-07-29 19:17:39,898 INFO [Transform] No errors found
+2026-07-29 19:17:39,898 INFO [Transform] Validating row | Row Number: 68 | dealer_id: 68
+2026-07-29 19:17:39,898 INFO [Transform] No errors found
+2026-07-29 19:17:39,898 INFO [Transform] Validating row | Row Number: 69 | dealer_id: 69
+2026-07-29 19:17:39,898 INFO [Transform] No errors found
+2026-07-29 19:17:39,898 INFO [Transform] Validating row | Row Number: 70 | dealer_id: 70
+2026-07-29 19:17:39,898 INFO [Transform] No errors found
+2026-07-29 19:17:39,898 INFO [Transform] Validating row | Row Number: 71 | dealer_id: 71
+2026-07-29 19:17:39,898 INFO [Transform] No errors found
+2026-07-29 19:17:39,898 INFO [Transform] Validating row | Row Number: 72 | dealer_id: 72
+2026-07-29 19:17:39,898 INFO [Transform] No errors found
+2026-07-29 19:17:39,898 INFO [Transform] Validating row | Row Number: 73 | dealer_id: 73
+2026-07-29 19:17:39,899 INFO [Transform] No errors found
+2026-07-29 19:17:39,899 INFO [Transform] Validating row | Row Number: 74 | dealer_id: 74
+2026-07-29 19:17:39,899 INFO [Transform] No errors found
+2026-07-29 19:17:39,899 INFO [Transform] Validating row | Row Number: 75 | dealer_id: 75
+2026-07-29 19:17:39,899 INFO [Transform] No errors found
+2026-07-29 19:17:39,899 INFO [Transform] Validating row | Row Number: 76 | dealer_id: 76
+2026-07-29 19:17:39,899 INFO [Transform] No errors found
+2026-07-29 19:17:39,899 INFO [Transform] Validating row | Row Number: 77 | dealer_id: 77
+2026-07-29 19:17:39,899 INFO [Transform] No errors found
+2026-07-29 19:17:39,899 INFO [Transform] Validating row | Row Number: 78 | dealer_id: 78
+2026-07-29 19:17:39,899 INFO [Transform] No errors found
+2026-07-29 19:17:39,899 INFO [Transform] Validating row | Row Number: 79 | dealer_id: 79
+2026-07-29 19:17:39,899 INFO [Transform] No errors found
+2026-07-29 19:17:39,899 INFO [Transform] Validating row | Row Number: 80 | dealer_id: 80
+2026-07-29 19:17:39,899 INFO [Transform] No errors found
+2026-07-29 19:17:39,899 INFO [Transform] Validation Summary:
+1. Total rows processed = 80
+2. Clean rows = 79 (98.75 %)
+3. Reject rows = 1 (1.25 %)
+4. Error Summary:
+{
+    "E001": {
+        "description": "Missing Required Fields",
+        "count": 1
+    },
+    "E002": {
+        "description": "Invalid Integer Field(s) Type",
+        "count": 0
+    },
+    "E003": {
+        "description": "Invalid Date Field(s) Format",
+        "count": 0
+    },
+    "E004": {
+        "description": "Invalid Region Value",
+        "count": 0
+    }
+}
+2026-07-29 19:17:39,900 INFO [Load] Saving Processed files | Clean file: /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/04_Deliverables/04_Unit4/03_U4L5/03_clean_dealer.csv | Reject file: /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/04_Deliverables/04_Unit4/03_U4L5/04_reject_dealer.csv
+2026-07-29 19:17:39,900 INFO [Load] Saving Successful
+2026-07-29 19:17:39,901 INFO [Load] Uploading | /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/04_Deliverables/04_Unit4/03_U4L5/03_clean_dealer.csv
+2026-07-29 19:17:39,901 INFO [Load] Connecting to AWS S3...
+2026-07-29 19:17:39,912 INFO [Load] Connection Successful
+2026-07-29 19:17:40,319 INFO [Load] Upload Successful | Saved as processed/clean/dealer.csv in raw-bucket-427763921511-ap-south-1-an
+2026-07-29 19:17:40,320 INFO [Load] Uploading | /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/04_Deliverables/04_Unit4/03_U4L5/04_reject_dealer.csv
+2026-07-29 19:17:40,321 INFO [Load] Connecting to AWS S3...
+2026-07-29 19:17:40,330 INFO [Load] Connection Successful
+2026-07-29 19:17:40,611 INFO [Load] Upload Successful | Saved as processed/reject/dealer.csv in raw-bucket-427763921511-ap-south-1-an
+2026-07-29 19:17:40,615 INFO [Load] Recording file in load_tracking...
+2026-07-29 19:17:40,615 INFO [Load] Connecting to Database...
+2026-07-29 19:17:40,634 INFO [Load] Connection Successful
+2026-07-29 19:17:40,634 INFO [Load] Executing Query | INSERT INTO load_tracking(file_name,file_hash) VALUES (%s,%s)
+2026-07-29 19:17:40,660 INFO [Load] Recording Successful
+2026-07-29 19:17:40,660 INFO [Main] 
+
+-------------------- Pipeline Completed --------------------
+
+2026-07-29 19:17:40,660 INFO [Main] Pipeline timeline summary:
+             Started at: 1785332859.3698127 | Ingested at 1785332859.8862793 | Transformed at 1785332859.9000359 | Loaded at 1785332860.6607995
+             Total Duration = 1.29s 
+             Ingestion Duration = 0.52s (40.01 %)
+             Transformation Duration = 0.01s (1.07 %)
+             Load Duration = 0.76s (58.93 %)

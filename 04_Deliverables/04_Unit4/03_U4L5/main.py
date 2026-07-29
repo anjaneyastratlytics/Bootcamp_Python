@@ -11,7 +11,7 @@ def main():
     '''Orchestrates the entire pipeline'''
 
     start_time = time.time()
-    log_info(stage, f"\n\n{"-"*20} Pipeline Started {"-"*20}\n")
+    log_info(stage, f"\n\n{'-'*20} Pipeline Started {'-'*20}\n")
     # Ingest
     ## Download file from AWS S3 bucket
     download_file(bucket_name,input_object_key,input_local_path)
@@ -48,13 +48,13 @@ def main():
 
     total_duration = load_time - start_time
 
-    log_info(stage, f"\n\n{"-"*20} Pipeline Completed {"-"*20}\n")
+    log_info(stage, f"\n\n{'-'*20} Pipeline Completed {'-'*20}\n")
     log_info(stage, f'''Pipeline timeline summary:
              Started at: {start_time} | Ingested at {ingest_time} | Transformed at {transform_time} | Loaded at {load_time}
              Total Duration = {total_duration:.2f}s 
-             Ingestion Duration = {ingest_duration:.2f}s ({round(100.0*(ingest_duration/total_duration),2)})
-             Transformation Duration = {transform_duration:.2f}s ({round(100.0*(transform_duration/total_duration),2)})
-             Load Duration = {load_duration:.2f}s ({round(100.0*(load_duration/total_duration),2)})''')
+             Ingestion Duration = {ingest_duration:.2f}s ({round(100.0*(ingest_duration/total_duration),2)} %)
+             Transformation Duration = {transform_duration:.2f}s ({round(100.0*(transform_duration/total_duration),2)} %)
+             Load Duration = {load_duration:.2f}s ({round(100.0*(load_duration/total_duration),2)} %)''')
 
 if __name__=='__main__':
     main()
