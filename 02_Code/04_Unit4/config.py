@@ -1,9 +1,9 @@
 # local file paths
 root_path = '/home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/'
-log_file_path = root_path + '04_Deliverables/02_Unit2/11_pipeline.log'
-input_local_path = root_path + '04_Deliverables/02_Unit2/12_dirty_dealer.csv'
-output_clean_local_path = root_path + '04_Deliverables/02_Unit2/13_clean_dealer.csv'
-output_reject_local_path = root_path + '04_Deliverables/02_Unit2/14_reject_dealer.csv'
+log_file_path = root_path + '04_Deliverables/04_Unit4/01_U4L2/01_pipeline.log'
+input_local_path = root_path + '04_Deliverables/04_Unit4/01_U4L2/02_dirty_dealer.csv'
+output_clean_local_path = root_path + '04_Deliverables/04_Unit4/01_U4L2/03_clean_dealer.csv'
+output_reject_local_path = root_path + '04_Deliverables/04_Unit4/01_U4L2/04_reject_dealer.csv'
 
 # AWS S3
 bucket_name = 'raw-bucket-427763921511-ap-south-1-an'

@@ -3,6 +3,8 @@ from logger import log_info, log_warning, log_error
 import json
 from datetime import datetime
 
+stage = "[Transform]"
+
 def normalize_null(value):
     '''Normalizes null meaning value to standardized python None'''
     if value is None or not isinstance(value,str):
@@ -14,7 +16,7 @@ def normalize_null(value):
 
 def get_normalized_rows(row_list):
     '''Returns entire row list after normalizing null for all fields of all rows'''
-    log_info("Normalizing Null Values")
+    log_info(stage,"Normalizing Null Values")
     for idx in range(len(row_list)):
         row = row_list[idx]
         for field in row:
@@ -87,7 +89,7 @@ def validate_rows(row_list):
     row_count = 0
     for row in row_list:
         row_count += 1
-        log_info(f"Validating row | Row Number: {row_count} | dealer_id: {row.get('dealer_id')}")
+        log_info(stage,f"Validating row | Row Number: {row_count} | dealer_id: {row.get('dealer_id')}")
         errors = []
 
         mising_errors = check_required_fields(row)
@@ -99,13 +101,13 @@ def validate_rows(row_list):
         if errors:
             error_codes = set([e[0] for e in errors])
             error_descs = [e[1] for e in errors]
-            log_error(f"Errors found: {error_descs}")
+            log_error(stage,f"Errors found: {error_descs}")
             for code in error_codes:
                 error_summary[code]['count'] += 1
             validated_row['errors'] = error_descs
             invalid.append(validated_row)
         else:
-            log_info(f"No errors found")
+            log_info(stage,f"No errors found")
             valid.append(validated_row)
 
     return valid, invalid, error_summary
@@ -115,4 +117,4 @@ def log_validation_summary(clean_cnt,reject_cnt,error_summary):
     total_cnt = clean_cnt + reject_cnt
     clean_pct = round(100.0*clean_cnt/total_cnt,2)
     reject_pct = round(100.0*reject_cnt/total_cnt,2)
-    log_info(f"Validation Summary:\n1. Total rows processed = {total_cnt}\n2. Clean rows = {clean_cnt} ({clean_pct} %)\n3. Reject rows = {reject_cnt} ({reject_pct} %)\n4. Error Summary:\n{json.dumps(error_summary,indent=4)}")
+    log_info(stage,f"Validation Summary:\n1. Total rows processed = {total_cnt}\n2. Clean rows = {clean_cnt} ({clean_pct} %)\n3. Reject rows = {reject_cnt} ({reject_pct} %)\n4. Error Summary:\n{json.dumps(error_summary,indent=4)}")

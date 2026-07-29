@@ -8,11 +8,11 @@ logging.basicConfig(
     format ="%(asctime)s %(levelname)s %(message)s"
 )
 
-def log_info(msg):
-    logging.info(msg)
+def log_info(stage,msg):
+    logging.info(stage+msg)
 
-def log_warning(msg):
-    logging.warning(msg)
+def log_warning(stage,msg):
+    logging.warning(stage+msg)
 
-def log_error(msg):
-    logging.error(msg)
+def log_error(stage,msg):
+    logging.error(stage+msg)
