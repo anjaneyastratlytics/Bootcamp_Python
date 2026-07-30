@@ -101,7 +101,7 @@ def validate_rows(row_list):
         if errors:
             error_codes = set([e[0] for e in errors])
             error_descs = [e[1] for e in errors]
-            log_error(stage,f"Errors found: {error_descs}")
+            log_warning(stage,f"Errors found: {error_descs}")
             for code in error_codes:
                 error_summary[code]['count'] += 1
             validated_row['errors'] = error_descs

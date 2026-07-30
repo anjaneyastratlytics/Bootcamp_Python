@@ -33,27 +33,17 @@ def save_files(valid, invalid, field_names, output_clean_local_path, output_reje
         log_error(stage,f"Saving Failed: {e}")
         raise
 
-def get_s3_client():
-    '''Returns AWS S3 client using credentials stored in env'''
+
+def upload_file(local_path,bucket_name,object_key):
+    '''Uploads file from local and saves to AWS S3 bucket'''
     try:
-        log_info(stage,f"Connecting to AWS S3...")
+        log_info(stage,f"Uploading | {local_path}")
         s3 = boto3.client(
             's3',
             aws_access_key_id = os.getenv('AWS_ACCESS_KEY_ID'),
             aws_secret_access_key = os.getenv('AWS_SECRET_ACCESS_KEY'),
             region_name = 'ap-south-1'
         )
-        log_info(stage,f"Connection Successful")
-    except Exception as e:
-        log_error(stage,f"Connection Failed: {e}")
-        raise
-    return s3
-
-def upload_file(local_path,bucket_name,object_key):
-    '''Uploads file from local and saves to AWS S3 bucket'''
-    try:
-        log_info(stage,f"Uploading | {local_path}")
-        s3 = get_s3_client()
         s3.upload_file(local_path,bucket_name,object_key)
         log_info(stage,f"Upload Successful | Saved as {object_key} in {bucket_name}")
     except Exception as e:
