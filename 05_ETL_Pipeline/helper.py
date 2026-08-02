@@ -1,4 +1,4 @@
-from logger import log_info
+from logger import log_info, log_system_error
 
 import time
 from functools import wraps
@@ -18,22 +18,8 @@ def retry(max_attempts=3,delay=2):
                     if attempt == max_attempts - 1:
                         raise
                     backoff = delay * (2**attempt)
-                    log_info(f"[SYSTEM] Waiting for {backoff}s before retrying")
+                    log_info("[SYSTEM]",f"Waiting for {backoff}s before retrying")
                     time.sleep(backoff)
         return wrapper
     return decorator
 
-def check_rule(value,condition,range):
-    '''Checks if value satisfies condition and range'''
-    if range is None:
-        return True
-    if condition == 'gt':
-        return value > range
-    if condition == 'gte':
-        return value >= range
-    if condition == 'lt':
-            return value < range
-    if condition == 'lte':
-        return value <= range
-    if condition == 'in':
-        return value in range

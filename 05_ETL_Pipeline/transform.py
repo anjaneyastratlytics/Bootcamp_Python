@@ -1,10 +1,9 @@
-from config import reqd_fields,int_fields,float_fields,date_fields,field_range_dict
+from config import reqd_fields_dict,int_fields,float_fields,date_fields,field_range_dict
 from logger import log_info,log_data_error,log_system_error
-from helper import check_rule
 
 from datetime import datetime
 
-module = "TRANSFORM"
+module = "[TRANSFORM]"
 
 def normalize_null(value):
     '''Normalizes null values into None'''
@@ -20,7 +19,7 @@ def normalize_null_row(row):
         row[field] = normalize_null(row.get(field))
     return row
 
-def check_reqd_fields(row):
+def check_reqd_fields(row,reqd_fields):
     '''Checks if required fields are present in the row'''
     missing_fields = [] 
     for field in reqd_fields:
@@ -38,27 +37,47 @@ def check_types(row):
         value = row.get(field)
         if value:
             try:
-                value = int(value)
+                row[field] = int(value)
             except Exception as e:
                 bad_type_fields.append(field)
     for field in float_fields:
-            value = row.get(field)
-            if value:
-                try:
-                    value = float(value)
-                except Exception as e:
-                    bad_type_fields.append(field)
+        value = row.get(field)
+        if value:
+            try:
+                row[field] = float(value)
+            except Exception as e:
+                bad_type_fields.append(field)
     for field in date_fields:
-            value = row.get(field)
-            if value:
-                try:
-                    value = datetime.strptime(value,"%Y-%m-%d")
-                except Exception as e:
-                    bad_type_fields.append(field)     
+        value = row.get(field)
+        if value:
+            try:
+                row[field] = datetime.strptime(value,"%Y-%m-%d")
+            except Exception as e:
+                bad_type_fields.append(field)     
     if bad_type_fields:
         log_data_error(module,f"Bad type fields: {bad_type_fields}")
-        return ["E002_BAD_TYPE"]
-    return []
+        return row, ["E002_BAD_TYPE"]
+    return row, []
+
+def check_rule(value,condition,range):
+    '''Checks if value satisfies condition and range'''
+    try:
+        if range is None:
+            return True
+        if condition == 'gt':
+            return value > range
+        if condition == 'gte':
+            return value >= range
+        if condition == 'lt':
+            return value < range
+        if condition == 'lte':
+            return value <= range
+        if condition == 'in':
+            return value in range
+        return False
+    except Exception as e:
+        log_system_error(module,f"Unexpected error: {e} | {(value,condition,range)}")
+        raise
 
 def check_ranges(row):
     '''Checks data ranges as per business logic'''
@@ -90,20 +109,23 @@ def check_fk_relation(row,id_sets):
         return ["E004_FK_VIOLATION"]
     return []
 
-def validate_row(row,row_no,id_sets):
+def validate_row(file_name,row,row_no,id_sets=None):
     '''Performs required fields check, data types check, range check and FK violation check for row'''
     log_info(module,f"Validating | Row number: {row_no}")
     errors = []
-    errors.append(check_reqd_fields(row))
-    errors.append(check_types(row))
-    errors.append(check_ranges(row))
-    errors.append(check_fk_relation(row,id_sets))
+    reqd_fields = reqd_fields_dict.get(file_name)
+    errors.extend(check_reqd_fields(row,reqd_fields))
+    val_row, type_errors = check_types(row)
+    errors.extend(type_errors)
+    errors.extend(check_ranges(val_row))
+    if id_sets:
+        errors.extend(check_fk_relation(val_row,id_sets))
     if errors:
         log_data_error(module,f"All errors found: {errors}")
-        return errors
-    return []
+        return val_row, errors
+    return val_row, []
 
-def validate_rows(file_name,row_list,id_sets,):
+def validate_rows(file_name,row_list,id_sets=None):
     '''Normalizes and validates all rows and returns valid and invalid row sets'''
     log_info(module,f"Validating | {file_name}")
     valid_rows = []
@@ -118,22 +140,22 @@ def validate_rows(file_name,row_list,id_sets,):
     try:
         for row in row_list:
             row_no += 1
-            norm_row = normalize_null(row)
-            errors = validate_row(norm_row,row_no,id_sets)
+            norm_row = normalize_null_row(row)
+            val_row, errors = validate_row(file_name,norm_row,row_no,id_sets)
             if errors:
-                invalid_rows.append(norm_row)
+                invalid_rows.append(val_row)
                 for error in errors:
                     error_counts[error] += 1
             else:
-                valid_rows.append(norm_row)
+                valid_rows.append(val_row)
         total_cnt = len(row_list)
         valid_cnt = len(valid_rows)
         invalid_cnt = len(invalid_rows)
         validation_summary = {
-            'Total_Rows' : {total_cnt},
-            'Valid_Rows' : {valid_cnt},
-            'Invalid_Rows' : {invalid_cnt},
-            'Error_Counts_By_Type' : {error_counts}
+            'Total_Rows' : total_cnt,
+            'Valid_Rows' : valid_cnt,
+            'Invalid_Rows' : invalid_cnt,
+            'Error_Counts_By_Type' : error_counts
         }
         log_info(module,f"Validation Complete | Total rows = {total_cnt} | Valid rows = {valid_cnt} | Invalid rows = {invalid_cnt}")
         return  valid_rows, invalid_rows, validation_summary

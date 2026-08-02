@@ -3,6 +3,11 @@ log_format = "%(asctime)s %(levelname)s %(message)s"
 
 # AWS S3
 s3_region = 'ap-south-1'
+raw_bucket = 'raw-bucket-427763921511-ap-south-1-an'
+dirty_dealer_key = 'dirty/dealer.csv'
+dirty_product_key = 'dirty/product.csv'
+dirty_inventory_key = 'dirty/inventory.csv'
+dirty_sales_key = 'dirty/sales_logs.jsonl'
 
 # PGADMIN DB
 DB_HOST = "localhost"
@@ -32,10 +37,12 @@ validation_summary_path = root_path + "05_ETL_Pipeline/Data/validation_summary.j
 
 
 # Data Validation
-dealer_reqd_fields = ['dealer_id','dealer_code','dealer_name','region','dealer_type','is_active','credit_terms_days']
-product_reqd_fields = ['product_id','sku','product_name','category','unit_cost','unit_price','is_discontinued']
-inventory_reqd_fields = ['inventory_id','snapshot_date','dealer_id','product_id','on_hand_qty','on_order_qty']
-dealer_reqd_fields = []
+reqd_fields_dict = {
+    "dealer": ['dealer_id','dealer_code','dealer_name','region','dealer_type','is_active','credit_terms_days'],
+    "product": ['product_id','sku','product_name','category','unit_cost','unit_price','is_discontinued'],
+    "inventory": ['inventory_id','snapshot_date','dealer_id','product_id','on_hand_qty','on_order_qty'],
+    "sales": []
+}
 
 int_fields = ['dealer_id','credit_terms_days','product_id','dealer_id','product_id','on_hand_qty','on_order_qty','reorder_point','reorder_qty']
 date_fields = ['created_date','snapshot_date','last_restock_date','last_sale_date']
