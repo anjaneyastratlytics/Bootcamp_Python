@@ -1,0 +1,50 @@
+# Logging Format
+log_format = "%(asctime)s %(levelname)s %(message)s"
+
+# AWS S3
+s3_region = 'ap-south-1'
+
+# PGADMIN DB
+DB_HOST = "localhost"
+DB_NAME = "BootcampSL"
+DB_USER = "postgres"
+DB_PORT = 5432
+
+# Local Paths
+root_path = "C:/Users/KIIT/Desktop/Stratlytics/02_Bootcamp/04_Python/"
+
+dirty_dealer_path = root_path + "05_ETL_Pipeline/Data/Source/dealer.csv"
+dirty_product_path = root_path + "05_ETL_Pipeline/Data/Source/product.csv"
+dirty_inventory_path = root_path + "05_ETL_Pipeline/Data/Source/inventory.cv"
+dirty_sales_path = root_path + "05_ETL_Pipeline/Data/Source/sales_logs.jsonl"
+
+pipeline_log_path = root_path + "05_ETL_Pipeline/Data/pipeline.log"
+
+clean_dealer_path = root_path + "05_ETL_Pipeline/Data/Processed/Clean/dealer.csv"
+clean_product_path = root_path + "05_ETL_Pipeline/Data/Processed/Clean/product.csv"
+clean_inventory_path = root_path + "05_ETL_Pipeline/Data/Processed/Clean/inventory.cv"
+
+reject_dealer_path = root_path + "05_ETL_Pipeline/Data/Processed/Reject/dealer.csv"
+reject_product_path = root_path + "05_ETL_Pipeline/Data/Processed/Reject/product.csv"
+reject_inventory_path = root_path + "05_ETL_Pipeline/Data/Processed/Reject/inventory.cv"
+
+validation_summary_path = root_path + "05_ETL_Pipeline/Data/validation_summary.json"
+
+
+# Data Validation
+dealer_reqd_fields = ['dealer_id','dealer_code','dealer_name','region','dealer_type','is_active','credit_terms_days']
+product_reqd_fields = ['product_id','sku','product_name','category','unit_cost','unit_price','is_discontinued']
+inventory_reqd_fields = ['inventory_id','snapshot_date','dealer_id','product_id','on_hand_qty','on_order_qty']
+dealer_reqd_fields = []
+
+int_fields = ['dealer_id','credit_terms_days','product_id','dealer_id','product_id','on_hand_qty','on_order_qty','reorder_point','reorder_qty']
+date_fields = ['created_date','snapshot_date','last_restock_date','last_sale_date']
+float_fields = ['unit_cost','unit_price','weight_kg']
+
+field_range_dict = {
+    'unit_cost': {'gt':0,'gte':None,'lt':None,'lte':None,'in':None},
+    'unit_price': {'gt':0,'gte':None,'lt':None,'lte':None,'in':None},
+    'on_hand_qty': {'gt':None,'gte':0,'lt':None,'lte':None,'in':None},
+    'on_order_qty': {'gt':None,'gte':0,'lt':None,'lte':None,'in':None},
+    'reorder_qty': {'gt':None,'gte':0,'lt':None,'lte':None,'in':None}
+}
