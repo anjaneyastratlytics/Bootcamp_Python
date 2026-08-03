@@ -66,8 +66,10 @@ def is_already_processed(file_hash):
                 cursor.execute(query,(file_hash,))
                 if cursor.fetchone():
                     log_warning(module, "File already processed")
+                    return True
                 else:
                     log_info(module, "File never processed")
+                    return False
     except ConnectionError as e:
             log_system_error(module, f"Connection failed: {e}")
             raise
@@ -116,14 +118,3 @@ def get_rows_list_from_jsonl(file_path):
         log_system_error(module,f"Reading failed: {e}")
         raise
     return row_list
-
-def get_field_values(file_name,row_list,field):
-    '''Returns a set of unique field values'''
-    log_info(module,f"Extracting values | File = {file_name} | Field = {field}")
-    value_set = set()
-    for row in row_list:
-        value = row.get(field)
-        if value:
-            value_set.add(value)
-    log_info(module,f"Found {len(value_set)} unique {field}(s)")
-    return value_set

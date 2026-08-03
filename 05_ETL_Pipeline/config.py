@@ -11,19 +11,21 @@ dirty_sales_key = 'dirty/sales_logs.jsonl'
 
 # PGADMIN DB
 DB_HOST = "localhost"
-DB_NAME = "BootcampSL"
+# DB_NAME = "BootcampSL"
+DB_NAME = "bootcamp"
 DB_USER = "postgres"
 DB_PORT = 5432
 
 # Local Paths
-root_path = "C:/Users/KIIT/Desktop/Stratlytics/02_Bootcamp/04_Python/"
+# root_path = "C:/Users/KIIT/Desktop/Stratlytics/02_Bootcamp/04_Python/"
+root_path = "/home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/"
 
 dirty_dealer_path = root_path + "05_ETL_Pipeline/Data/Source/dealer.csv"
 dirty_product_path = root_path + "05_ETL_Pipeline/Data/Source/product.csv"
 dirty_inventory_path = root_path + "05_ETL_Pipeline/Data/Source/inventory.cv"
 dirty_sales_path = root_path + "05_ETL_Pipeline/Data/Source/sales_logs.jsonl"
 
-pipeline_log_path = root_path + "05_ETL_Pipeline/Data/pipeline.log"
+pipeline_log_path = root_path + "05_ETL_Pipeline/Data/Meta/pipeline.log"
 
 clean_dealer_path = root_path + "05_ETL_Pipeline/Data/Processed/Clean/dealer.csv"
 clean_product_path = root_path + "05_ETL_Pipeline/Data/Processed/Clean/product.csv"
