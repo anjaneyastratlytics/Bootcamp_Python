@@ -57,3 +57,20 @@ field_range_dict = {
     'on_order_qty': {'gt':None,'gte':0,'lt':None,'lte':None,'in':None},
     'reorder_qty': {'gt':None,'gte':0,'lt':None,'lte':None,'in':None}
 }
+
+# Load
+field_names_dict = {
+    "dealer": ['dealer_id','dealer_code','dealer_name','city','state','region','dealer_type','created_date','is_active','email','phone','credit_terms_days'],
+    "product": ['product_id','sku','product_name','category','subcategory','brand','uom','unit_cost','unit_price','weight_kg','is_discontinued','created_date'],
+    "inventory": ['inventory_id','snapshot_date','dealer_id','product_id','on_hand_qty','on_order_qty','reorder_point','reorder_qty','last_restock_date','last_sale_date']
+}
+postgres_load_queries = {
+    "dealer": '''INSERT INTO dealer VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)''',
+    "product": '''INSERT INTO product VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)''',
+    "inventory": '''INSERT INTO inventory VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'''
+}
+batch_size_dict = {
+    "dealer": None,
+    "product": None,
+    "inventory": 200
+}
