@@ -12,7 +12,7 @@ dirty_sales_key = 'dirty/sales_logs.jsonl'
 # PGADMIN DB
 DB_HOST = "localhost"
 # DB_NAME = "BootcampSL"
-DB_NAME = "bootcamp"
+DB_NAME = "PY201"
 DB_USER = "postgres"
 DB_PORT = 5432
 
@@ -35,7 +35,9 @@ reject_dealer_path = root_path + "05_ETL_Pipeline/Data/Processed/Reject/dealer.c
 reject_product_path = root_path + "05_ETL_Pipeline/Data/Processed/Reject/product.csv"
 reject_inventory_path = root_path + "05_ETL_Pipeline/Data/Processed/Reject/inventory.cv"
 
-validation_summary_path = root_path + "05_ETL_Pipeline/Data/validation_summary.json"
+dealer_validation_summary_path = root_path + "05_ETL_Pipeline/Data/Meta/dealer_validation_summary.json"
+product_validation_summary_path = root_path + "05_ETL_Pipeline/Data/Meta/product_validation_summary.json"
+inventory_validation_summary_path = root_path + "05_ETL_Pipeline/Data/Meta/inventory_validation_summary.json"
 
 
 # Data Validation
@@ -49,6 +51,11 @@ reqd_fields_dict = {
 int_fields = ['dealer_id','credit_terms_days','product_id','dealer_id','product_id','on_hand_qty','on_order_qty','reorder_point','reorder_qty']
 date_fields = ['created_date','snapshot_date','last_restock_date','last_sale_date']
 float_fields = ['unit_cost','unit_price','weight_kg']
+id_fields_dict = {
+    "dealer": "dealer_id",
+    "product": "product_id",
+    "inventory": "inventory_id"
+}
 
 field_range_dict = {
     'unit_cost': {'gt':0,'gte':None,'lt':None,'lte':None,'in':None},
@@ -62,12 +69,14 @@ field_range_dict = {
 field_names_dict = {
     "dealer": ['dealer_id','dealer_code','dealer_name','city','state','region','dealer_type','created_date','is_active','email','phone','credit_terms_days'],
     "product": ['product_id','sku','product_name','category','subcategory','brand','uom','unit_cost','unit_price','weight_kg','is_discontinued','created_date'],
-    "inventory": ['inventory_id','snapshot_date','dealer_id','product_id','on_hand_qty','on_order_qty','reorder_point','reorder_qty','last_restock_date','last_sale_date']
+    "inventory": ['inventory_id','snapshot_date','dealer_id','product_id','on_hand_qty','on_order_qty','reorder_point','reorder_qty','last_restock_date','last_sale_date'],
+    "etl_audit": ['file_name','file_hash','total_rows','valid_rows','invalid_rows','inserted_rows','failed_rows','status','run_timestamp']
 }
 postgres_load_queries = {
     "dealer": '''INSERT INTO dealer VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)''',
     "product": '''INSERT INTO product VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)''',
-    "inventory": '''INSERT INTO inventory VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'''
+    "inventory": '''INSERT INTO inventory VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)''',
+    "etl_audit": '''INSERT INTO etl_audit(file_name,file_hash,total_rows,valid_rows,invalid_rows,inserted_rows,failed_rows,status,run_timestamp) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s)'''
 }
 batch_size_dict = {
     "dealer": None,

@@ -18,6 +18,7 @@ module = "[INGEST]"
 def download_from_s3(bucket_name,object_key,local_path):
     '''Downloads object from AWS S3 and saves to local'''
     log_info(module,f"Downloading from S3 | Bucket = {bucket_name} | Object = {object_key}")
+
     try:
         s3 = boto3.client(
             's3',
@@ -26,10 +27,13 @@ def download_from_s3(bucket_name,object_key,local_path):
             region_name = s3_region
         )
         s3.download_file(bucket_name,object_key,local_path)
+
         log_info(module,f"Download successful | Saved to {local_path}")
+
     except ConnectionError as e:
         log_system_error(module, f"Connection failed: {e}")
         raise
+
     except Exception as e:
         log_system_error(module,f"Unexpected error: {e}")
         raise
@@ -37,22 +41,27 @@ def download_from_s3(bucket_name,object_key,local_path):
 def generate_file_hash(file_path):
     '''Reads file content and creates unique file hash'''
     log_info(module, f"Creating hash | {file_path}")
-    hasher = hashlib.sha256()
+
     try:
+        hasher = hashlib.sha256()
         with open(file_path,mode="rb") as f:
            hasher.update(f.read())
         log_info(module,f"Hash created successfullly")
+
     except Exception as e:
         log_system_error(module,f"Hashing failed: {e}")
         raise
+
     return hasher.hexdigest()
 
 @retry()
 def is_already_processed(file_hash):
     '''Checks if the file is already processed'''
-    log_info(module, f"Initiating search in load_tracking")
+    log_info(module, f"Initiating search in etl_audit")
+
     try:
         log_info(module,f"Connecting to Database")
+
         with psycopg2.connect(
             host = DB_HOST,
             database = DB_NAME,
@@ -61,8 +70,9 @@ def is_already_processed(file_hash):
             port = DB_PORT
         ) as conn:
             log_info(module,f"Connection Successful")
+
             with conn.cursor() as cursor:
-                query = '''SELECT 1 FROM load_tracking WHERE file_hash = %s'''
+                query = """SELECT 1 FROM etl_audit WHERE file_hash = %s AND status <> 'failure'"""
                 cursor.execute(query,(file_hash,))
                 if cursor.fetchone():
                     log_warning(module, "File already processed")
@@ -70,9 +80,11 @@ def is_already_processed(file_hash):
                 else:
                     log_info(module, "File never processed")
                     return False
+                
     except ConnectionError as e:
             log_system_error(module, f"Connection failed: {e}")
             raise
+    
     except Exception as e:
         log_system_error(module,f"Unexpected error: {e}")
         raise
@@ -80,26 +92,32 @@ def is_already_processed(file_hash):
 def get_rows_list_from_csv(file_path):
     '''Reads csv and returns list of dictionary rows'''
     log_info(module, f"Reading csv file | {file_path}")
+
     row_list = []
+
     try:
         with open(file_path,newline="") as f:
             reader = csv.DictReader(f)
             for row in reader:
                 row_list.append(row)
         log_info(module,f"Read {len(row_list)} rows successfullly")
+
     except Exception as e:
         log_system_error(module,f"Reading failed: {e}")
         raise
+
     return row_list
 
 def get_rows_from_csv(file_path):
     '''Reads csv and returns dictionary rows one by one'''
     log_info(module, f"Reading csv file | {file_path}")
+
     try:
         with open(file_path,newline="") as f:
             reader = csv.DictReader(f)
             for row in reader:
                 yield row
+
     except Exception as e:
         log_system_error(module,f"Reading failed: {e}")
         raise
@@ -107,14 +125,18 @@ def get_rows_from_csv(file_path):
 def get_rows_list_from_jsonl(file_path):
     '''Reads jsonl and returns list of dictionary rows'''
     log_info(module,f"Reading jsonl file | {file_path}")
+
     row_list = []
+    
     try:
         with open(file_path,newline="") as f:
             for line in f:
                 row = json.loads(line)
                 row_list.append(row)
         log_info(module,f"Read {len(row_list)} rows successfullly")
+
     except Exception as e:
         log_system_error(module,f"Reading failed: {e}")
         raise
+
     return row_list

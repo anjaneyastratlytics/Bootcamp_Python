@@ -1,0 +1,12 @@
+{
+    "total_rows": 900,
+    "valid_rows": 819,
+    "invalid_rows": 81,
+    "error_count_by_type": {
+        "E001_MISSING_REQUIRED": 10,
+        "E002_BAD_TYPE": 15,
+        "E003_OUT_OF_RANGE": 27,
+        "E004_FK_VIOLATION": 29,
+        "E005_DUPLICATE_ID": 0
+    }
+}
