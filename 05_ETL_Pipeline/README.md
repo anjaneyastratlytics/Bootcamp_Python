@@ -5,26 +5,24 @@ This project consists of a complete production-ready ETL (Extract, Transform, an
 
 ## Folder Structure
 
-**Folder**,*File*
-
-    **Root**
-    |--*README.md*: You are **here**
-    |--**Data**
-    |   |--**Source**: Input files to work with
-    |   |--**Processed**
-    |   |   |--**Clean**: Processed files with only valid records
-    |   |   |--**Reject**: Processed files with rejected records
-    |   |--**Meta**: Summaries and log files
-    |--*.env.example*: demo env file showing what data needs to be stored in original .env file before running the pipeline.
-    |--*config.py*: Contains all configurable data, business rules and paths
-    |--*logger.py*: Contains all logging formats and functions
-    |--*helper.py*: Contains helper functions that don't belong to any specific stage in the pipeline
-    |--*ingest.py*: Contains all data ingestion/extraction functions
-    |--*transform.py*: Contains all transformation and validation functions 
-    |--*load.py*: Contains all data loading functions
-    |--*main.py*: Orchestrates the entire pipeline combining different modules together
-    |--**tests**    
-        |--*test_validation.py*: Unittest module for all pure transformation functions 
+    Root
+    |--README.md: You are `here`
+    |--Data
+    |   |--Source: Input files to work with
+    |   |--Processed
+    |   |   |--Clean: Processed files with only valid records
+    |   |   |--Reject: Processed files with rejected records
+    |   |--Meta: Summaries and log files
+    |--.env.example: demo env file showing what data needs to be stored in original .env file before running the pipeline.
+    |--config.py: Contains all configurable data, business rules and paths
+    |--logger.py: Contains all logging formats and functions
+    |--helper.py: Contains helper functions that don't belong to any specific stage in the pipeline
+    |--ingest.py: Contains all data ingestion/extraction functions
+    |--transform.py: Contains all transformation and validation functions 
+    |--load.py: Contains all data loading functions
+    |--main.py: Orchestrates the entire pipeline combining different modules together
+    |--tests    
+        |--test_validation.py: Unittest module for all pure transformation functions 
 
 ---
 
@@ -61,10 +59,10 @@ The pipeline follows the following process for each input file:
 - `reject_product.csv`
 - `reject_inventory.csv`
 - All clean files loaded into database
-- 'dealer_etl_summary.json'
-- 'product_etl_summary.json'
-- 'inventory_etl_summary.json'
-- 'pipeline.log'
+- `dealer_etl_summary.json`
+- `product_etl_summary.json`
+- `inventory_etl_summary.json`
+- `pipeline.log`
 
 ---
 
