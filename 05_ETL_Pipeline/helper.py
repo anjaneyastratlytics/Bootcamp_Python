@@ -2,6 +2,8 @@ from logger import log_info, log_system_error
 
 import time
 from functools import wraps
+from psycopg2 import DatabaseError
+from botocore.exceptions import ClientError, ConnectTimeoutError, ReadTimeoutError, ConnectionError as BotoConnectionError
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -14,7 +16,7 @@ def retry(max_attempts=3,delay=2):
             for attempt in range(max_attempts):
                 try:
                     return func(*args,**kwargs)
-                except Exception as e:
+                except (ConnectionError,TimeoutError,OSError,DatabaseError,ClientError,ConnectTimeoutError,ReadTimeoutError,BotoConnectionError) as e:
                     if attempt == max_attempts - 1:
                         raise
                     backoff = delay * (2**attempt)
