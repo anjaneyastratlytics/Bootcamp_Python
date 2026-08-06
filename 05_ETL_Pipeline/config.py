@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -25,24 +26,26 @@ DB_PASS = os.getenv("DB_PASS")
 
 # Local Paths
 
-dirty_dealer_path = "Data/Source/dealer.csv"
-dirty_product_path = "Data/Source/product.csv"
-dirty_inventory_path = "Data/Source/inventory.cv"
-dirty_sales_path =  "Data/Source/sales_logs.jsonl"
+root_path = Path(__file__).resolve().parent
 
-pipeline_log_path = "Data/Meta/pipeline.log"
+pipeline_log_path = os.path.join(root_path,"Data/Meta/pipeline.log")
 
-clean_dealer_path = "Data/Processed/Clean/dealer.csv"
-clean_product_path = "Data/Processed/Clean/product.csv"
-clean_inventory_path = "Data/Processed/Clean/inventory.cv"
+dirty_dealer_path = os.path.join(root_path,"Data/Source/dealer.csv")
+dirty_product_path = os.path.join(root_path,"Data/Source/product.csv")
+dirty_inventory_path = os.path.join(root_path,"Data/Source/inventory.cv")
+dirty_sales_path =  os.path.join(root_path,"Data/Source/sales_logs.jsonl")
 
-reject_dealer_path = "Data/Processed/Reject/dealer.csv"
-reject_product_path = "Data/Processed/Reject/product.csv"
-reject_inventory_path = "Data/Processed/Reject/inventory.cv"
+clean_dealer_path = os.path.join(root_path,"Data/Processed/Clean/dealer.csv")
+clean_product_path = os.path.join(root_path,"Data/Processed/Clean/product.csv")
+clean_inventory_path = os.path.join(root_path,"Data/Processed/Clean/inventory.cv")
 
-dealer_validation_summary_path = "Data/Meta/dealer_validation_summary.json"
-product_validation_summary_path = "Data/Meta/product_validation_summary.json"
-inventory_validation_summary_path = "Data/Meta/inventory_validation_summary.json"
+reject_dealer_path = os.path.join(root_path,"Data/Processed/Reject/dealer.csv")
+reject_product_path = os.path.join(root_path,"Data/Processed/Reject/product.csv")
+reject_inventory_path = os.path.join(root_path,"Data/Processed/Reject/inventory.cv")
+
+dealer_etl_summary_path = os.path.join(root_path,"Data/Meta/dealer_etl_summary.json")
+product_etl_summary_path = os.path.join(root_path,"Data/Meta/product_etl_summary.json")
+inventory_etl_summary_path = os.path.join(root_path,"Data/Meta/inventory_etl_summary.json")
 
 
 # Data Validation
