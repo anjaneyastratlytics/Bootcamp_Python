@@ -3,3 +3,6 @@ venv/
 
 # Secrets and Credentials
 .env
+
+# Cache
+**/*cache*/
