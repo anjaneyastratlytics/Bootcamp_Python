@@ -25,3 +25,14 @@ def retry(max_attempts=3,delay=2):
         return wrapper
     return decorator
 
+def get_etl_status(total_rows,valid_rows,inserted_rows):
+    '''Compares input to output and decides etl status'''
+    if inserted_rows == total_rows:
+        return "success"
+    if inserted_rows == valid_rows:
+        return "success_with_rejections"
+    if inserted_rows == 0:
+        return "failure"
+    if valid_rows == total_rows:
+        return "partial_success"
+    return "partial_success_with_rejections"

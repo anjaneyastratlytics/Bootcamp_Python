@@ -1,0 +1,19 @@
+{
+    "file_name": "dealer.csv",
+    "file_hash": "06a774cc887a598952eb0b915ea26409c049c6724c992d3d32a1617fe21e90b9",
+    "total_rows": 80,
+    "valid_rows": 79,
+    "invalid_rows": 1,
+    "error_count_by_type": {
+        "E001_MISSING_REQUIRED": 1,
+        "E002_BAD_TYPE": 0,
+        "E003_OUT_OF_RANGE": 0,
+        "E004_FK_VIOLATION": 0,
+        "E005_DUPLICATE_ID": 0
+    },
+    "inserted_rows": 79,
+    "failed_rows": 0,
+    "status": "success_with_rejections",
+    "run_timestamp": "2026-08-06T13:48:39.430884",
+    "execution_duration": "0.57 s"
+}

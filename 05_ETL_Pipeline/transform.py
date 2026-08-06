@@ -130,7 +130,9 @@ def get_field_values(file_name,row_list,field):
     value_set = set()
 
     for row in row_list:
-        value = eval(row.get(field))
+        value = row.get(field)
+        if isinstance(value,str):
+            value = eval(value)
         if value is not None:
             value_set.add(value)
     log_info(module,f"Found {len(value_set)} unique {field}(s)")

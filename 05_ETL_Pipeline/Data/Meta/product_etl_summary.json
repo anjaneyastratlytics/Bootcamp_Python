@@ -1,0 +1,19 @@
+{
+    "file_name": "product.csv",
+    "file_hash": "f1411754c33850ac46302a4a3a12588ddcf36fb8361951e4179fab466a6b3665",
+    "total_rows": 320,
+    "valid_rows": 312,
+    "invalid_rows": 8,
+    "error_count_by_type": {
+        "E001_MISSING_REQUIRED": 7,
+        "E002_BAD_TYPE": 1,
+        "E003_OUT_OF_RANGE": 0,
+        "E004_FK_VIOLATION": 0,
+        "E005_DUPLICATE_ID": 0
+    },
+    "inserted_rows": 312,
+    "failed_rows": 0,
+    "status": "success_with_rejections",
+    "run_timestamp": "2026-08-06T13:48:40.030074",
+    "execution_duration": "0.48 s"
+}

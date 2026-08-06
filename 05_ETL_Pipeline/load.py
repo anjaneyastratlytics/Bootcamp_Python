@@ -13,7 +13,7 @@ import json
 
 module = "[LOAD]"
 
-def save_to_local(file_name,row_list,local_path):
+def save_to_local_csv(file_name,row_list,local_path):
     '''Takes list of row dictionaries and saves as csv file locally'''
     log_info(module,f"Saving {file_name} to local")
 
@@ -38,17 +38,17 @@ def save_to_local(file_name,row_list,local_path):
         log_system_error(module,f"Unexpected error: {e}")
         raise
 
-def save_validation_summary(file,validation_summary,local_path):
-    '''Save validation summary json to local'''
+def save_to_local_json(file_name,dictionary,local_path):
+    '''Takes dictionary and saves as json file locally'''
 
     try:
-        log_info(module,f"Saving validation summary for {file}")
+        log_info(module,f"Saving {file_name} to local")
         with open(local_path,mode="w") as f:
-            json.dump(validation_summary,f,indent=4)
+            json.dump(dictionary,f,indent=4)
         log_info(module,f"Saved to {local_path}")
 
     except Exception as e:
-            log_system_error(module,f"Unexpected error during saving validation summary: {e}")
+            log_system_error(module,f"Unexpected error: {e}")
 
 @retry()
 def get_db_connection():
@@ -122,8 +122,7 @@ def load_to_database(file_name, row_list):
 def record_for_audit(record):
     '''Records etl metadata onto database for audit'''
     log_info(module,f"Recording etl metadata | {record.get('file_name')}")
-
-    record['status'] = "success" if record.get('inserted_rows') == record.get('total_rows') else ("failure" if record.get('inserted_rows') == 0 else "partial")
+    
     field_names = field_names_dict.get("etl_audit").copy()
     values_tuple = tuple([record[field] for field in field_names])
 

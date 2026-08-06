@@ -1,0 +1,19 @@
+{
+    "file_name": "inventory.cv",
+    "file_hash": "3eb796a897731ed65425ea0fc81149839c3fd6f95cce02930aaf6556f28e2595",
+    "total_rows": 900,
+    "valid_rows": 819,
+    "invalid_rows": 81,
+    "error_count_by_type": {
+        "E001_MISSING_REQUIRED": 10,
+        "E002_BAD_TYPE": 15,
+        "E003_OUT_OF_RANGE": 27,
+        "E004_FK_VIOLATION": 29,
+        "E005_DUPLICATE_ID": 0
+    },
+    "inserted_rows": 819,
+    "failed_rows": 0,
+    "status": "success_with_rejections",
+    "run_timestamp": "2026-08-06T13:48:40.532282",
+    "execution_duration": "0.69 s"
+}
