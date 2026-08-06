@@ -222,7 +222,7 @@ def validate_rows(file_name,row_list,id_sets=None):
 
             if error:
                 val_row['error'] = error
-                invalid_rows.append(val_row)
+                invalid_rows.append(row)
                 error_counts[error] += 1
             else:
                 valid_rows.append(val_row)

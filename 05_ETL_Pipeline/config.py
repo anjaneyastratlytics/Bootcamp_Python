@@ -32,16 +32,16 @@ pipeline_log_path = os.path.join(root_path,"Data/Meta/pipeline.log")
 
 dirty_dealer_path = os.path.join(root_path,"Data/Source/dealer.csv")
 dirty_product_path = os.path.join(root_path,"Data/Source/product.csv")
-dirty_inventory_path = os.path.join(root_path,"Data/Source/inventory.cv")
+dirty_inventory_path = os.path.join(root_path,"Data/Source/inventory.csv")
 dirty_sales_path =  os.path.join(root_path,"Data/Source/sales_logs.jsonl")
 
 clean_dealer_path = os.path.join(root_path,"Data/Processed/Clean/dealer.csv")
 clean_product_path = os.path.join(root_path,"Data/Processed/Clean/product.csv")
-clean_inventory_path = os.path.join(root_path,"Data/Processed/Clean/inventory.cv")
+clean_inventory_path = os.path.join(root_path,"Data/Processed/Clean/inventory.csv")
 
 reject_dealer_path = os.path.join(root_path,"Data/Processed/Reject/dealer.csv")
 reject_product_path = os.path.join(root_path,"Data/Processed/Reject/product.csv")
-reject_inventory_path = os.path.join(root_path,"Data/Processed/Reject/inventory.cv")
+reject_inventory_path = os.path.join(root_path,"Data/Processed/Reject/inventory.csv")
 
 dealer_etl_summary_path = os.path.join(root_path,"Data/Meta/dealer_etl_summary.json")
 product_etl_summary_path = os.path.join(root_path,"Data/Meta/product_etl_summary.json")

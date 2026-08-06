@@ -13,7 +13,7 @@ from datetime import datetime
     
 def main():
     '''Orchestrates the entire ETL pipeline for dealer, product and inventory'''
-    log_info("[MAIN]",f"\n{'*'*20}Pipeline Start{'*'*20}\n\n")
+    log_info("[MAIN]",f"\n\n{'*'*20}Pipeline Start{'*'*20}\n")
 
     # Dealer
 
@@ -184,6 +184,8 @@ def main():
                   Ingest Duration = {inventory_ingest_duration:.2f} s
                   Transform Duration = {inventory_transform_duration:.2f} s
                   Load Duration = {inventory_load_duration:.2f} s""")
+        
+    log_info("[MAIN]",f"\n\n{'*'*20}Pipeline END{'*'*20}\n")
 
 
 if __name__ == "__main__":

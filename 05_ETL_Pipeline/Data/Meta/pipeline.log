@@ -1,239 +1,247 @@
-2026-08-06 13:48:39,430 INFO [MAIN] 
+2026-08-06 18:34:34,914 INFO [MAIN] 
+
 ********************Pipeline Start********************
 
-
-2026-08-06 13:48:39,430 INFO [MAIN] 
+2026-08-06 18:34:34,914 INFO [MAIN] 
 --------------------Dealer--------------------
-2026-08-06 13:48:39,430 INFO [INGEST] Downloading from S3 | Bucket = raw-bucket-427763921511-ap-south-1-an | Object = dirty/dealer.csv
-2026-08-06 13:48:39,895 INFO [INGEST] Download successful | Saved to /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/dealer.csv
-2026-08-06 13:48:39,896 INFO [INGEST] Creating hash | /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/dealer.csv
-2026-08-06 13:48:39,896 INFO [INGEST] Hash created successfullly
-2026-08-06 13:48:39,896 INFO [INGEST] Initiating search in etl_audit
-2026-08-06 13:48:39,896 INFO [INGEST] Connecting to Database
-2026-08-06 13:48:39,916 INFO [INGEST] Connection Successful
-2026-08-06 13:48:39,919 INFO [INGEST] File never processed
-2026-08-06 13:48:39,920 INFO [INGEST] Reading csv file | /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/dealer.csv
-2026-08-06 13:48:39,921 INFO [INGEST] Read 80 rows successfullly
-2026-08-06 13:48:39,921 INFO [TRANSFORM] Validating | dealer
-2026-08-06 13:48:39,925 WARNING [TRANSFORM] [DATA ERROR] Row number = 37 | Missing required fields: ['dealer_name']
-2026-08-06 13:48:39,926 INFO [TRANSFORM] Validation Complete | Total rows = 80 | Valid rows = 79 | Invalid rows = 1
-2026-08-06 13:48:39,926 INFO [LOAD] Saving valid_dealer to local
-2026-08-06 13:48:39,927 INFO [LOAD] Saved at /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Processed/Clean/dealer.csv
-2026-08-06 13:48:39,927 INFO [LOAD] Saving invalid_dealer to local
-2026-08-06 13:48:39,928 INFO [LOAD] Saved at /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Processed/Reject/dealer.csv
-2026-08-06 13:48:39,928 INFO [LOAD] Loading valid_dealer to database
-2026-08-06 13:48:39,928 INFO [LOAD] Connecting to database
-2026-08-06 13:48:39,946 INFO [LOAD] Connection successful
-2026-08-06 13:48:39,946 INFO [LOAD] Batch 1.0 transaction begin
-2026-08-06 13:48:39,999 INFO [LOAD] Transaction successful | Inserted 79 row(s)
-2026-08-06 13:48:40,000 INFO [LOAD] Recording etl metadata | dealer.csv
-2026-08-06 13:48:40,000 INFO [LOAD] Connecting to database
-2026-08-06 13:48:40,019 INFO [LOAD] Connection successful
-2026-08-06 13:48:40,029 INFO [LOAD] Record successful
-2026-08-06 13:48:40,029 INFO [LOAD] Saving dealer_etl_summary to local
-2026-08-06 13:48:40,029 INFO [LOAD] Saved to /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Meta/dealer_etl_summary.json
-2026-08-06 13:48:40,029 INFO [MAIN] [TIMER] Dealer ETL execution time summary |
-                  Ingest Duration = 0.49 s
-                  Transform Duration = 0.00 s
-                  Load Duration = 0.07 s
-2026-08-06 13:48:40,030 INFO [MAIN] 
---------------------Product--------------------
-2026-08-06 13:48:40,030 INFO [INGEST] Downloading from S3 | Bucket = raw-bucket-427763921511-ap-south-1-an | Object = dirty/product.csv
-2026-08-06 13:48:40,401 INFO [INGEST] Download successful | Saved to /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/product.csv
-2026-08-06 13:48:40,403 INFO [INGEST] Creating hash | /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/product.csv
-2026-08-06 13:48:40,403 INFO [INGEST] Hash created successfullly
-2026-08-06 13:48:40,403 INFO [INGEST] Initiating search in etl_audit
-2026-08-06 13:48:40,403 INFO [INGEST] Connecting to Database
-2026-08-06 13:48:40,425 INFO [INGEST] Connection Successful
-2026-08-06 13:48:40,427 INFO [INGEST] File never processed
-2026-08-06 13:48:40,427 INFO [INGEST] Reading csv file | /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/product.csv
-2026-08-06 13:48:40,430 INFO [INGEST] Read 320 rows successfullly
-2026-08-06 13:48:40,430 INFO [TRANSFORM] Validating | product
-2026-08-06 13:48:40,432 WARNING [TRANSFORM] [DATA ERROR] Row number = 27 | Missing required fields: ['sku']
-2026-08-06 13:48:40,433 WARNING [TRANSFORM] [DATA ERROR] Row number = 50 | Missing required fields: ['unit_price']
-2026-08-06 13:48:40,435 WARNING [TRANSFORM] [DATA ERROR] Row number = 77 | Missing required fields: ['product_name']
-2026-08-06 13:48:40,436 WARNING [TRANSFORM] [DATA ERROR] Row number = 90 | Missing required fields: ['unit_price']
-2026-08-06 13:48:40,438 WARNING [TRANSFORM] [DATA ERROR] Row number = 189 | Missing required fields: ['sku']
-2026-08-06 13:48:40,439 WARNING [TRANSFORM] [DATA ERROR] Row number = 209 | Bad type fields: ['unit_cost', 'unit_price']
-2026-08-06 13:48:40,439 WARNING [TRANSFORM] [DATA ERROR] Row number = 211 | Missing required fields: ['unit_price']
-2026-08-06 13:48:40,441 WARNING [TRANSFORM] [DATA ERROR] Row number = 279 | Missing required fields: ['unit_price']
-2026-08-06 13:48:40,442 INFO [TRANSFORM] Validation Complete | Total rows = 320 | Valid rows = 312 | Invalid rows = 8
-2026-08-06 13:48:40,442 INFO [LOAD] Saving valid_product to local
-2026-08-06 13:48:40,446 INFO [LOAD] Saved at /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Processed/Clean/product.csv
-2026-08-06 13:48:40,446 INFO [LOAD] Saving invalid_product to local
-2026-08-06 13:48:40,446 INFO [LOAD] Saved at /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Processed/Reject/product.csv
-2026-08-06 13:48:40,446 INFO [LOAD] Loading valid_product to database
-2026-08-06 13:48:40,447 INFO [LOAD] Connecting to database
-2026-08-06 13:48:40,460 INFO [LOAD] Connection successful
-2026-08-06 13:48:40,460 INFO [LOAD] Batch 1.0 transaction begin
-2026-08-06 13:48:40,511 INFO [LOAD] Transaction successful | Inserted 312 row(s)
-2026-08-06 13:48:40,511 INFO [LOAD] Recording etl metadata | product.csv
-2026-08-06 13:48:40,511 INFO [LOAD] Connecting to database
-2026-08-06 13:48:40,526 INFO [LOAD] Connection successful
-2026-08-06 13:48:40,531 INFO [LOAD] Record successful
-2026-08-06 13:48:40,531 INFO [LOAD] Saving product_etl_summary to local
-2026-08-06 13:48:40,532 INFO [LOAD] Saved to /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Meta/product_etl_summary.json
-2026-08-06 13:48:40,532 INFO [MAIN] [TIMER] product ETL execution time summary |
-                  Ingest Duration = 0.40 s
+2026-08-06 18:34:34,914 INFO [INGEST] Downloading from S3 | Bucket = raw-bucket-427763921511-ap-south-1-an | Object = dirty/dealer.csv
+2026-08-06 18:34:35,421 INFO [INGEST] Download successful | Saved to /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/dealer.csv
+2026-08-06 18:34:35,423 INFO [INGEST] Creating hash | /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/dealer.csv
+2026-08-06 18:34:35,424 INFO [INGEST] Hash created successfullly
+2026-08-06 18:34:35,424 INFO [INGEST] Initiating search in etl_audit
+2026-08-06 18:34:35,424 INFO [INGEST] Connecting to Database
+2026-08-06 18:34:35,462 INFO [INGEST] Connection Successful
+2026-08-06 18:34:35,464 INFO [INGEST] File never processed
+2026-08-06 18:34:35,465 INFO [INGEST] Reading csv file | /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/dealer.csv
+2026-08-06 18:34:35,469 INFO [INGEST] Read 80 rows successfullly
+2026-08-06 18:34:35,469 INFO [TRANSFORM] Validating | dealer
+2026-08-06 18:34:35,480 WARNING [TRANSFORM] [DATA ERROR] Row number = 37 | Missing required fields: ['dealer_name']
+2026-08-06 18:34:35,483 INFO [TRANSFORM] Validation Complete | Total rows = 80 | Valid rows = 79 | Invalid rows = 1
+2026-08-06 18:34:35,483 INFO [LOAD] Saving valid_dealer to local
+2026-08-06 18:34:35,485 INFO [LOAD] Saved at /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Processed/Clean/dealer.csv
+2026-08-06 18:34:35,485 INFO [LOAD] Saving invalid_dealer to local
+2026-08-06 18:34:35,486 INFO [LOAD] Saved at /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Processed/Reject/dealer.csv
+2026-08-06 18:34:35,486 INFO [LOAD] Loading valid_dealer to database
+2026-08-06 18:34:35,488 INFO [LOAD] Connecting to database
+2026-08-06 18:34:35,515 INFO [LOAD] Connection successful
+2026-08-06 18:34:35,515 INFO [LOAD] Batch 1.0 transaction begin
+2026-08-06 18:34:35,634 INFO [LOAD] Transaction successful | Inserted 79 row(s)
+2026-08-06 18:34:35,634 INFO [LOAD] Recording etl metadata | dealer.csv
+2026-08-06 18:34:35,634 INFO [LOAD] Connecting to database
+2026-08-06 18:34:35,671 INFO [LOAD] Connection successful
+2026-08-06 18:34:35,724 INFO [LOAD] Record successful
+2026-08-06 18:34:35,725 INFO [LOAD] Saving dealer_etl_summary to local
+2026-08-06 18:34:35,726 INFO [LOAD] Saved to /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Meta/dealer_etl_summary.json
+2026-08-06 18:34:35,728 INFO [MAIN] [TIMER] Dealer ETL execution time summary |
+                  Ingest Duration = 0.56 s
                   Transform Duration = 0.01 s
-                  Load Duration = 0.07 s
-2026-08-06 13:48:40,532 INFO [MAIN] 
+                  Load Duration = 0.15 s
+2026-08-06 18:34:35,728 INFO [MAIN] 
+--------------------Product--------------------
+2026-08-06 18:34:35,728 INFO [INGEST] Downloading from S3 | Bucket = raw-bucket-427763921511-ap-south-1-an | Object = dirty/product.csv
+2026-08-06 18:34:36,080 INFO [INGEST] Download successful | Saved to /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/product.csv
+2026-08-06 18:34:36,081 INFO [INGEST] Creating hash | /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/product.csv
+2026-08-06 18:34:36,081 INFO [INGEST] Hash created successfullly
+2026-08-06 18:34:36,082 INFO [INGEST] Initiating search in etl_audit
+2026-08-06 18:34:36,082 INFO [INGEST] Connecting to Database
+2026-08-06 18:34:36,106 INFO [INGEST] Connection Successful
+2026-08-06 18:34:36,108 INFO [INGEST] File never processed
+2026-08-06 18:34:36,109 INFO [INGEST] Reading csv file | /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/product.csv
+2026-08-06 18:34:36,112 INFO [INGEST] Read 320 rows successfullly
+2026-08-06 18:34:36,112 INFO [TRANSFORM] Validating | product
+2026-08-06 18:34:36,113 WARNING [TRANSFORM] [DATA ERROR] Row number = 27 | Missing required fields: ['sku']
+2026-08-06 18:34:36,113 WARNING [TRANSFORM] [DATA ERROR] Row number = 50 | Missing required fields: ['unit_price']
+2026-08-06 18:34:36,114 WARNING [TRANSFORM] [DATA ERROR] Row number = 77 | Missing required fields: ['product_name']
+2026-08-06 18:34:36,114 WARNING [TRANSFORM] [DATA ERROR] Row number = 90 | Missing required fields: ['unit_price']
+2026-08-06 18:34:36,118 WARNING [TRANSFORM] [DATA ERROR] Row number = 189 | Missing required fields: ['sku']
+2026-08-06 18:34:36,120 WARNING [TRANSFORM] [DATA ERROR] Row number = 209 | Bad type fields: ['unit_cost', 'unit_price']
+2026-08-06 18:34:36,121 WARNING [TRANSFORM] [DATA ERROR] Row number = 211 | Missing required fields: ['unit_price']
+2026-08-06 18:34:36,123 WARNING [TRANSFORM] [DATA ERROR] Row number = 279 | Missing required fields: ['unit_price']
+2026-08-06 18:34:36,124 INFO [TRANSFORM] Validation Complete | Total rows = 320 | Valid rows = 312 | Invalid rows = 8
+2026-08-06 18:34:36,124 INFO [LOAD] Saving valid_product to local
+2026-08-06 18:34:36,127 INFO [LOAD] Saved at /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Processed/Clean/product.csv
+2026-08-06 18:34:36,127 INFO [LOAD] Saving invalid_product to local
+2026-08-06 18:34:36,127 INFO [LOAD] Saved at /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Processed/Reject/product.csv
+2026-08-06 18:34:36,127 INFO [LOAD] Loading valid_product to database
+2026-08-06 18:34:36,128 INFO [LOAD] Connecting to database
+2026-08-06 18:34:36,147 INFO [LOAD] Connection successful
+2026-08-06 18:34:36,147 INFO [LOAD] Batch 1.0 transaction begin
+2026-08-06 18:34:36,347 INFO [LOAD] Transaction successful | Inserted 312 row(s)
+2026-08-06 18:34:36,347 INFO [LOAD] Recording etl metadata | product.csv
+2026-08-06 18:34:36,348 INFO [LOAD] Connecting to database
+2026-08-06 18:34:36,367 INFO [LOAD] Connection successful
+2026-08-06 18:34:36,377 INFO [LOAD] Record successful
+2026-08-06 18:34:36,378 INFO [LOAD] Saving product_etl_summary to local
+2026-08-06 18:34:36,378 INFO [LOAD] Saved to /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Meta/product_etl_summary.json
+2026-08-06 18:34:36,379 INFO [MAIN] [TIMER] product ETL execution time summary |
+                  Ingest Duration = 0.38 s
+                  Transform Duration = 0.01 s
+                  Load Duration = 0.22 s
+2026-08-06 18:34:36,379 INFO [MAIN] 
 --------------------Inventory--------------------
-2026-08-06 13:48:40,532 INFO [INGEST] Downloading from S3 | Bucket = raw-bucket-427763921511-ap-south-1-an | Object = dirty/inventory.csv
-2026-08-06 13:48:40,928 INFO [INGEST] Download successful | Saved to /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/inventory.cv
-2026-08-06 13:48:40,929 INFO [INGEST] Creating hash | /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/inventory.cv
-2026-08-06 13:48:40,929 INFO [INGEST] Hash created successfullly
-2026-08-06 13:48:40,929 INFO [INGEST] Initiating search in etl_audit
-2026-08-06 13:48:40,929 INFO [INGEST] Connecting to Database
-2026-08-06 13:48:40,945 INFO [INGEST] Connection Successful
-2026-08-06 13:48:40,946 INFO [INGEST] File never processed
-2026-08-06 13:48:40,946 INFO [INGEST] Reading csv file | /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/inventory.cv
-2026-08-06 13:48:40,951 INFO [INGEST] Read 900 rows successfullly
-2026-08-06 13:48:40,951 INFO [TRANSFORM] Extracting values | File = dealer | Field = dealer_id
-2026-08-06 13:48:40,951 INFO [TRANSFORM] Found 79 unique dealer_id(s)
-2026-08-06 13:48:40,951 INFO [TRANSFORM] Extracting values | File = product | Field = product_id
-2026-08-06 13:48:40,951 INFO [TRANSFORM] Found 312 unique product_id(s)
-2026-08-06 13:48:40,952 INFO [TRANSFORM] Validating | inventory
-2026-08-06 13:48:40,953 WARNING [TRANSFORM] [DATA ERROR] Row number = 46 | FK violating fields: ['product_id']
-2026-08-06 13:48:40,954 WARNING [TRANSFORM] [DATA ERROR] Row number = 58 | FK violating fields: ['product_id']
-2026-08-06 13:48:40,954 WARNING [TRANSFORM] [DATA ERROR] Row number = 62 | FK violating fields: ['product_id']
-2026-08-06 13:48:40,954 WARNING [TRANSFORM] [DATA ERROR] Row number = 72 | Out of range fields: ['on_hand_qty']
-2026-08-06 13:48:40,955 WARNING [TRANSFORM] [DATA ERROR] Row number = 83 | Bad type fields: ['snapshot_date']
-2026-08-06 13:48:40,955 WARNING [TRANSFORM] [DATA ERROR] Row number = 84 | Out of range fields: ['on_hand_qty']
-2026-08-06 13:48:40,955 WARNING [TRANSFORM] [DATA ERROR] Row number = 85 | Missing required fields: ['snapshot_date']
-2026-08-06 13:48:40,955 WARNING [TRANSFORM] [DATA ERROR] Row number = 93 | Out of range fields: ['on_order_qty']
-2026-08-06 13:48:40,956 WARNING [TRANSFORM] [DATA ERROR] Row number = 95 | Out of range fields: ['on_order_qty']
-2026-08-06 13:48:40,956 WARNING [TRANSFORM] [DATA ERROR] Row number = 102 | Bad type fields: ['snapshot_date']
-2026-08-06 13:48:40,956 WARNING [TRANSFORM] [DATA ERROR] Row number = 104 | Bad type fields: ['snapshot_date']
-2026-08-06 13:48:40,957 WARNING [TRANSFORM] [DATA ERROR] Row number = 116 | FK violating fields: ['product_id']
-2026-08-06 13:48:40,957 WARNING [TRANSFORM] [DATA ERROR] Row number = 126 | FK violating fields: ['product_id']
-2026-08-06 13:48:40,959 WARNING [TRANSFORM] [DATA ERROR] Row number = 167 | Missing required fields: ['snapshot_date']
-2026-08-06 13:48:40,962 WARNING [TRANSFORM] [DATA ERROR] Row number = 203 | FK violating fields: ['product_id']
-2026-08-06 13:48:40,962 WARNING [TRANSFORM] [DATA ERROR] Row number = 205 | Bad type fields: ['on_hand_qty']
-2026-08-06 13:48:40,963 WARNING [TRANSFORM] [DATA ERROR] Row number = 218 | Out of range fields: ['on_order_qty']
-2026-08-06 13:48:40,963 WARNING [TRANSFORM] [DATA ERROR] Row number = 229 | Bad type fields: ['snapshot_date']
-2026-08-06 13:48:40,964 WARNING [TRANSFORM] [DATA ERROR] Row number = 235 | Missing required fields: ['snapshot_date']
-2026-08-06 13:48:40,964 WARNING [TRANSFORM] [DATA ERROR] Row number = 239 | FK violating fields: ['product_id']
-2026-08-06 13:48:40,964 WARNING [TRANSFORM] [DATA ERROR] Row number = 241 | Bad type fields: ['snapshot_date']
-2026-08-06 13:48:40,964 WARNING [TRANSFORM] [DATA ERROR] Row number = 244 | Missing required fields: ['snapshot_date']
-2026-08-06 13:48:40,965 WARNING [TRANSFORM] [DATA ERROR] Row number = 262 | Out of range fields: ['on_order_qty']
-2026-08-06 13:48:40,966 WARNING [TRANSFORM] [DATA ERROR] Row number = 288 | FK violating fields: ['product_id']
-2026-08-06 13:48:40,968 WARNING [TRANSFORM] [DATA ERROR] Row number = 336 | Out of range fields: ['on_order_qty']
-2026-08-06 13:48:40,969 WARNING [TRANSFORM] [DATA ERROR] Row number = 347 | Out of range fields: ['on_hand_qty']
-2026-08-06 13:48:40,969 WARNING [TRANSFORM] [DATA ERROR] Row number = 356 | Out of range fields: ['on_order_qty']
-2026-08-06 13:48:40,970 WARNING [TRANSFORM] [DATA ERROR] Row number = 386 | Out of range fields: ['on_order_qty']
-2026-08-06 13:48:40,971 WARNING [TRANSFORM] [DATA ERROR] Row number = 392 | Bad type fields: ['snapshot_date']
-2026-08-06 13:48:40,971 WARNING [TRANSFORM] [DATA ERROR] Row number = 399 | Out of range fields: ['on_hand_qty']
-2026-08-06 13:48:40,972 WARNING [TRANSFORM] [DATA ERROR] Row number = 412 | Out of range fields: ['on_order_qty']
-2026-08-06 13:48:40,974 WARNING [TRANSFORM] [DATA ERROR] Row number = 436 | Bad type fields: ['on_hand_qty']
-2026-08-06 13:48:40,975 WARNING [TRANSFORM] [DATA ERROR] Row number = 441 | FK violating fields: ['product_id']
-2026-08-06 13:48:40,976 WARNING [TRANSFORM] [DATA ERROR] Row number = 452 | Bad type fields: ['on_hand_qty']
-2026-08-06 13:48:40,976 WARNING [TRANSFORM] [DATA ERROR] Row number = 456 | Out of range fields: ['on_hand_qty']
-2026-08-06 13:48:40,976 WARNING [TRANSFORM] [DATA ERROR] Row number = 463 | FK violating fields: ['product_id']
-2026-08-06 13:48:40,977 WARNING [TRANSFORM] [DATA ERROR] Row number = 464 | FK violating fields: ['product_id']
-2026-08-06 13:48:40,977 WARNING [TRANSFORM] [DATA ERROR] Row number = 465 | FK violating fields: ['product_id']
-2026-08-06 13:48:40,977 WARNING [TRANSFORM] [DATA ERROR] Row number = 467 | Out of range fields: ['on_order_qty']
-2026-08-06 13:48:40,978 WARNING [TRANSFORM] [DATA ERROR] Row number = 496 | FK violating fields: ['product_id']
-2026-08-06 13:48:40,979 WARNING [TRANSFORM] [DATA ERROR] Row number = 527 | FK violating fields: ['product_id']
-2026-08-06 13:48:40,980 WARNING [TRANSFORM] [DATA ERROR] Row number = 529 | Bad type fields: ['on_hand_qty']
-2026-08-06 13:48:40,980 WARNING [TRANSFORM] [DATA ERROR] Row number = 533 | Out of range fields: ['on_hand_qty']
-2026-08-06 13:48:40,980 WARNING [TRANSFORM] [DATA ERROR] Row number = 535 | Out of range fields: ['on_hand_qty']
-2026-08-06 13:48:40,980 WARNING [TRANSFORM] [DATA ERROR] Row number = 540 | FK violating fields: ['product_id']
-2026-08-06 13:48:40,981 WARNING [TRANSFORM] [DATA ERROR] Row number = 556 | FK violating fields: ['product_id']
-2026-08-06 13:48:40,981 WARNING [TRANSFORM] [DATA ERROR] Row number = 564 | FK violating fields: ['product_id']
-2026-08-06 13:48:40,982 WARNING [TRANSFORM] [DATA ERROR] Row number = 587 | FK violating fields: ['dealer_id']
-2026-08-06 13:48:40,983 WARNING [TRANSFORM] [DATA ERROR] Row number = 600 | FK violating fields: ['product_id']
-2026-08-06 13:48:40,984 WARNING [TRANSFORM] [DATA ERROR] Row number = 611 | Out of range fields: ['on_hand_qty']
-2026-08-06 13:48:40,984 WARNING [TRANSFORM] [DATA ERROR] Row number = 623 | Bad type fields: ['on_hand_qty']
-2026-08-06 13:48:40,985 WARNING [TRANSFORM] [DATA ERROR] Row number = 635 | Missing required fields: ['snapshot_date']
-2026-08-06 13:48:40,985 WARNING [TRANSFORM] [DATA ERROR] Row number = 644 | FK violating fields: ['product_id']
-2026-08-06 13:48:40,985 WARNING [TRANSFORM] [DATA ERROR] Row number = 650 | Bad type fields: ['snapshot_date']
-2026-08-06 13:48:40,986 WARNING [TRANSFORM] [DATA ERROR] Row number = 655 | FK violating fields: ['product_id']
-2026-08-06 13:48:40,987 WARNING [TRANSFORM] [DATA ERROR] Row number = 679 | Bad type fields: ['on_hand_qty']
-2026-08-06 13:48:40,987 WARNING [TRANSFORM] [DATA ERROR] Row number = 692 | Missing required fields: ['snapshot_date']
-2026-08-06 13:48:40,988 WARNING [TRANSFORM] [DATA ERROR] Row number = 701 | FK violating fields: ['product_id']
-2026-08-06 13:48:40,988 WARNING [TRANSFORM] [DATA ERROR] Row number = 703 | Out of range fields: ['on_order_qty']
-2026-08-06 13:48:40,988 WARNING [TRANSFORM] [DATA ERROR] Row number = 705 | Out of range fields: ['on_order_qty']
-2026-08-06 13:48:40,988 WARNING [TRANSFORM] [DATA ERROR] Row number = 720 | Out of range fields: ['on_hand_qty']
-2026-08-06 13:48:40,989 WARNING [TRANSFORM] [DATA ERROR] Row number = 725 | FK violating fields: ['product_id']
-2026-08-06 13:48:40,989 WARNING [TRANSFORM] [DATA ERROR] Row number = 744 | Bad type fields: ['on_hand_qty']
-2026-08-06 13:48:40,989 WARNING [TRANSFORM] [DATA ERROR] Row number = 746 | Missing required fields: ['snapshot_date']
-2026-08-06 13:48:40,990 WARNING [TRANSFORM] [DATA ERROR] Row number = 755 | FK violating fields: ['product_id']
-2026-08-06 13:48:40,990 WARNING [TRANSFORM] [DATA ERROR] Row number = 765 | Out of range fields: ['on_order_qty']
-2026-08-06 13:48:40,991 WARNING [TRANSFORM] [DATA ERROR] Row number = 773 | FK violating fields: ['product_id']
-2026-08-06 13:48:40,991 WARNING [TRANSFORM] [DATA ERROR] Row number = 780 | FK violating fields: ['product_id']
-2026-08-06 13:48:40,991 WARNING [TRANSFORM] [DATA ERROR] Row number = 782 | FK violating fields: ['dealer_id']
-2026-08-06 13:48:40,992 WARNING [TRANSFORM] [DATA ERROR] Row number = 796 | Out of range fields: ['on_hand_qty']
-2026-08-06 13:48:40,992 WARNING [TRANSFORM] [DATA ERROR] Row number = 809 | Out of range fields: ['on_order_qty']
-2026-08-06 13:48:40,992 WARNING [TRANSFORM] [DATA ERROR] Row number = 813 | Bad type fields: ['snapshot_date']
-2026-08-06 13:48:40,993 WARNING [TRANSFORM] [DATA ERROR] Row number = 816 | Out of range fields: ['on_hand_qty']
-2026-08-06 13:48:40,994 WARNING [TRANSFORM] [DATA ERROR] Row number = 847 | Out of range fields: ['on_order_qty']
-2026-08-06 13:48:40,994 WARNING [TRANSFORM] [DATA ERROR] Row number = 849 | Missing required fields: ['snapshot_date']
-2026-08-06 13:48:40,994 WARNING [TRANSFORM] [DATA ERROR] Row number = 857 | Out of range fields: ['on_order_qty']
-2026-08-06 13:48:40,994 WARNING [TRANSFORM] [DATA ERROR] Row number = 863 | FK violating fields: ['product_id']
-2026-08-06 13:48:40,995 WARNING [TRANSFORM] [DATA ERROR] Row number = 868 | Missing required fields: ['snapshot_date']
-2026-08-06 13:48:40,995 WARNING [TRANSFORM] [DATA ERROR] Row number = 872 | Missing required fields: ['snapshot_date']
-2026-08-06 13:48:40,995 WARNING [TRANSFORM] [DATA ERROR] Row number = 879 | FK violating fields: ['product_id']
-2026-08-06 13:48:40,996 WARNING [TRANSFORM] [DATA ERROR] Row number = 892 | Out of range fields: ['on_order_qty']
-2026-08-06 13:48:40,996 INFO [TRANSFORM] Validation Complete | Total rows = 900 | Valid rows = 819 | Invalid rows = 81
-2026-08-06 13:48:40,996 INFO [LOAD] Saving valid_inventory to local
-2026-08-06 13:48:41,003 INFO [LOAD] Saved at /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Processed/Clean/inventory.cv
-2026-08-06 13:48:41,003 INFO [LOAD] Saving invalid_inventory to local
-2026-08-06 13:48:41,004 INFO [LOAD] Saved at /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Processed/Reject/inventory.cv
-2026-08-06 13:48:41,004 INFO [LOAD] Loading valid_inventory to database
-2026-08-06 13:48:41,005 INFO [LOAD] Connecting to database
-2026-08-06 13:48:41,018 INFO [LOAD] Connection successful
-2026-08-06 13:48:41,018 INFO [LOAD] Batch 1.0 transaction begin
-2026-08-06 13:48:41,053 INFO [LOAD] Transaction successful | Inserted 200 row(s)
-2026-08-06 13:48:41,053 INFO [LOAD] Batch 2.0 transaction begin
-2026-08-06 13:48:41,103 INFO [LOAD] Transaction successful | Inserted 200 row(s)
-2026-08-06 13:48:41,103 INFO [LOAD] Batch 3.0 transaction begin
-2026-08-06 13:48:41,164 INFO [LOAD] Transaction successful | Inserted 200 row(s)
-2026-08-06 13:48:41,164 INFO [LOAD] Batch 4.0 transaction begin
-2026-08-06 13:48:41,214 INFO [LOAD] Transaction successful | Inserted 200 row(s)
-2026-08-06 13:48:41,214 INFO [LOAD] Batch 5.0 transaction begin
-2026-08-06 13:48:41,224 INFO [LOAD] Transaction successful | Inserted 19 row(s)
-2026-08-06 13:48:41,224 INFO [LOAD] Recording etl metadata | inventory.cv
-2026-08-06 13:48:41,224 INFO [LOAD] Connecting to database
-2026-08-06 13:48:41,241 INFO [LOAD] Connection successful
-2026-08-06 13:48:41,254 INFO [LOAD] Record successful
-2026-08-06 13:48:41,254 INFO [LOAD] Saving inventory_etl_summary to local
-2026-08-06 13:48:41,255 INFO [LOAD] Saved to /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Meta/inventory_etl_summary.json
-2026-08-06 13:48:41,255 INFO [MAIN] [TIMER] inventory ETL execution time summary |
-                  Ingest Duration = 0.42 s
+2026-08-06 18:34:36,379 INFO [INGEST] Downloading from S3 | Bucket = raw-bucket-427763921511-ap-south-1-an | Object = dirty/inventory.csv
+2026-08-06 18:34:36,760 INFO [INGEST] Download successful | Saved to /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/inventory.csv
+2026-08-06 18:34:36,761 INFO [INGEST] Creating hash | /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/inventory.csv
+2026-08-06 18:34:36,762 INFO [INGEST] Hash created successfullly
+2026-08-06 18:34:36,762 INFO [INGEST] Initiating search in etl_audit
+2026-08-06 18:34:36,762 INFO [INGEST] Connecting to Database
+2026-08-06 18:34:36,781 INFO [INGEST] Connection Successful
+2026-08-06 18:34:36,782 INFO [INGEST] File never processed
+2026-08-06 18:34:36,783 INFO [INGEST] Reading csv file | /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/inventory.csv
+2026-08-06 18:34:36,787 INFO [INGEST] Read 900 rows successfullly
+2026-08-06 18:34:36,787 INFO [TRANSFORM] Extracting values | File = dealer | Field = dealer_id
+2026-08-06 18:34:36,787 INFO [TRANSFORM] Found 79 unique dealer_id(s)
+2026-08-06 18:34:36,787 INFO [TRANSFORM] Extracting values | File = product | Field = product_id
+2026-08-06 18:34:36,787 INFO [TRANSFORM] Found 312 unique product_id(s)
+2026-08-06 18:34:36,787 INFO [TRANSFORM] Validating | inventory
+2026-08-06 18:34:36,788 WARNING [TRANSFORM] [DATA ERROR] Row number = 46 | FK violating fields: ['product_id']
+2026-08-06 18:34:36,789 WARNING [TRANSFORM] [DATA ERROR] Row number = 58 | FK violating fields: ['product_id']
+2026-08-06 18:34:36,789 WARNING [TRANSFORM] [DATA ERROR] Row number = 62 | FK violating fields: ['product_id']
+2026-08-06 18:34:36,789 WARNING [TRANSFORM] [DATA ERROR] Row number = 72 | Out of range fields: ['on_hand_qty']
+2026-08-06 18:34:36,790 WARNING [TRANSFORM] [DATA ERROR] Row number = 83 | Bad type fields: ['snapshot_date']
+2026-08-06 18:34:36,790 WARNING [TRANSFORM] [DATA ERROR] Row number = 84 | Out of range fields: ['on_hand_qty']
+2026-08-06 18:34:36,790 WARNING [TRANSFORM] [DATA ERROR] Row number = 85 | Missing required fields: ['snapshot_date']
+2026-08-06 18:34:36,790 WARNING [TRANSFORM] [DATA ERROR] Row number = 93 | Out of range fields: ['on_order_qty']
+2026-08-06 18:34:36,791 WARNING [TRANSFORM] [DATA ERROR] Row number = 95 | Out of range fields: ['on_order_qty']
+2026-08-06 18:34:36,791 WARNING [TRANSFORM] [DATA ERROR] Row number = 102 | Bad type fields: ['snapshot_date']
+2026-08-06 18:34:36,791 WARNING [TRANSFORM] [DATA ERROR] Row number = 104 | Bad type fields: ['snapshot_date']
+2026-08-06 18:34:36,791 WARNING [TRANSFORM] [DATA ERROR] Row number = 116 | FK violating fields: ['product_id']
+2026-08-06 18:34:36,792 WARNING [TRANSFORM] [DATA ERROR] Row number = 126 | FK violating fields: ['product_id']
+2026-08-06 18:34:36,794 WARNING [TRANSFORM] [DATA ERROR] Row number = 167 | Missing required fields: ['snapshot_date']
+2026-08-06 18:34:36,795 WARNING [TRANSFORM] [DATA ERROR] Row number = 203 | FK violating fields: ['product_id']
+2026-08-06 18:34:36,796 WARNING [TRANSFORM] [DATA ERROR] Row number = 205 | Bad type fields: ['on_hand_qty']
+2026-08-06 18:34:36,797 WARNING [TRANSFORM] [DATA ERROR] Row number = 218 | Out of range fields: ['on_order_qty']
+2026-08-06 18:34:36,797 WARNING [TRANSFORM] [DATA ERROR] Row number = 229 | Bad type fields: ['snapshot_date']
+2026-08-06 18:34:36,797 WARNING [TRANSFORM] [DATA ERROR] Row number = 235 | Missing required fields: ['snapshot_date']
+2026-08-06 18:34:36,798 WARNING [TRANSFORM] [DATA ERROR] Row number = 239 | FK violating fields: ['product_id']
+2026-08-06 18:34:36,798 WARNING [TRANSFORM] [DATA ERROR] Row number = 241 | Bad type fields: ['snapshot_date']
+2026-08-06 18:34:36,798 WARNING [TRANSFORM] [DATA ERROR] Row number = 244 | Missing required fields: ['snapshot_date']
+2026-08-06 18:34:36,798 WARNING [TRANSFORM] [DATA ERROR] Row number = 262 | Out of range fields: ['on_order_qty']
+2026-08-06 18:34:36,799 WARNING [TRANSFORM] [DATA ERROR] Row number = 288 | FK violating fields: ['product_id']
+2026-08-06 18:34:36,801 WARNING [TRANSFORM] [DATA ERROR] Row number = 336 | Out of range fields: ['on_order_qty']
+2026-08-06 18:34:36,801 WARNING [TRANSFORM] [DATA ERROR] Row number = 347 | Out of range fields: ['on_hand_qty']
+2026-08-06 18:34:36,802 WARNING [TRANSFORM] [DATA ERROR] Row number = 356 | Out of range fields: ['on_order_qty']
+2026-08-06 18:34:36,803 WARNING [TRANSFORM] [DATA ERROR] Row number = 386 | Out of range fields: ['on_order_qty']
+2026-08-06 18:34:36,803 WARNING [TRANSFORM] [DATA ERROR] Row number = 392 | Bad type fields: ['snapshot_date']
+2026-08-06 18:34:36,803 WARNING [TRANSFORM] [DATA ERROR] Row number = 399 | Out of range fields: ['on_hand_qty']
+2026-08-06 18:34:36,804 WARNING [TRANSFORM] [DATA ERROR] Row number = 412 | Out of range fields: ['on_order_qty']
+2026-08-06 18:34:36,804 WARNING [TRANSFORM] [DATA ERROR] Row number = 436 | Bad type fields: ['on_hand_qty']
+2026-08-06 18:34:36,805 WARNING [TRANSFORM] [DATA ERROR] Row number = 441 | FK violating fields: ['product_id']
+2026-08-06 18:34:36,805 WARNING [TRANSFORM] [DATA ERROR] Row number = 452 | Bad type fields: ['on_hand_qty']
+2026-08-06 18:34:36,805 WARNING [TRANSFORM] [DATA ERROR] Row number = 456 | Out of range fields: ['on_hand_qty']
+2026-08-06 18:34:36,805 WARNING [TRANSFORM] [DATA ERROR] Row number = 463 | FK violating fields: ['product_id']
+2026-08-06 18:34:36,806 WARNING [TRANSFORM] [DATA ERROR] Row number = 464 | FK violating fields: ['product_id']
+2026-08-06 18:34:36,806 WARNING [TRANSFORM] [DATA ERROR] Row number = 465 | FK violating fields: ['product_id']
+2026-08-06 18:34:36,806 WARNING [TRANSFORM] [DATA ERROR] Row number = 467 | Out of range fields: ['on_order_qty']
+2026-08-06 18:34:36,807 WARNING [TRANSFORM] [DATA ERROR] Row number = 496 | FK violating fields: ['product_id']
+2026-08-06 18:34:36,808 WARNING [TRANSFORM] [DATA ERROR] Row number = 527 | FK violating fields: ['product_id']
+2026-08-06 18:34:36,808 WARNING [TRANSFORM] [DATA ERROR] Row number = 529 | Bad type fields: ['on_hand_qty']
+2026-08-06 18:34:36,808 WARNING [TRANSFORM] [DATA ERROR] Row number = 533 | Out of range fields: ['on_hand_qty']
+2026-08-06 18:34:36,809 WARNING [TRANSFORM] [DATA ERROR] Row number = 535 | Out of range fields: ['on_hand_qty']
+2026-08-06 18:34:36,809 WARNING [TRANSFORM] [DATA ERROR] Row number = 540 | FK violating fields: ['product_id']
+2026-08-06 18:34:36,810 WARNING [TRANSFORM] [DATA ERROR] Row number = 556 | FK violating fields: ['product_id']
+2026-08-06 18:34:36,810 WARNING [TRANSFORM] [DATA ERROR] Row number = 564 | FK violating fields: ['product_id']
+2026-08-06 18:34:36,811 WARNING [TRANSFORM] [DATA ERROR] Row number = 587 | FK violating fields: ['dealer_id']
+2026-08-06 18:34:36,811 WARNING [TRANSFORM] [DATA ERROR] Row number = 600 | FK violating fields: ['product_id']
+2026-08-06 18:34:36,812 WARNING [TRANSFORM] [DATA ERROR] Row number = 611 | Out of range fields: ['on_hand_qty']
+2026-08-06 18:34:36,812 WARNING [TRANSFORM] [DATA ERROR] Row number = 623 | Bad type fields: ['on_hand_qty']
+2026-08-06 18:34:36,813 WARNING [TRANSFORM] [DATA ERROR] Row number = 635 | Missing required fields: ['snapshot_date']
+2026-08-06 18:34:36,813 WARNING [TRANSFORM] [DATA ERROR] Row number = 644 | FK violating fields: ['product_id']
+2026-08-06 18:34:36,813 WARNING [TRANSFORM] [DATA ERROR] Row number = 650 | Bad type fields: ['snapshot_date']
+2026-08-06 18:34:36,813 WARNING [TRANSFORM] [DATA ERROR] Row number = 655 | FK violating fields: ['product_id']
+2026-08-06 18:34:36,814 WARNING [TRANSFORM] [DATA ERROR] Row number = 679 | Bad type fields: ['on_hand_qty']
+2026-08-06 18:34:36,815 WARNING [TRANSFORM] [DATA ERROR] Row number = 692 | Missing required fields: ['snapshot_date']
+2026-08-06 18:34:36,815 WARNING [TRANSFORM] [DATA ERROR] Row number = 701 | FK violating fields: ['product_id']
+2026-08-06 18:34:36,815 WARNING [TRANSFORM] [DATA ERROR] Row number = 703 | Out of range fields: ['on_order_qty']
+2026-08-06 18:34:36,815 WARNING [TRANSFORM] [DATA ERROR] Row number = 705 | Out of range fields: ['on_order_qty']
+2026-08-06 18:34:36,816 WARNING [TRANSFORM] [DATA ERROR] Row number = 720 | Out of range fields: ['on_hand_qty']
+2026-08-06 18:34:36,816 WARNING [TRANSFORM] [DATA ERROR] Row number = 725 | FK violating fields: ['product_id']
+2026-08-06 18:34:36,817 WARNING [TRANSFORM] [DATA ERROR] Row number = 744 | Bad type fields: ['on_hand_qty']
+2026-08-06 18:34:36,817 WARNING [TRANSFORM] [DATA ERROR] Row number = 746 | Missing required fields: ['snapshot_date']
+2026-08-06 18:34:36,817 WARNING [TRANSFORM] [DATA ERROR] Row number = 755 | FK violating fields: ['product_id']
+2026-08-06 18:34:36,817 WARNING [TRANSFORM] [DATA ERROR] Row number = 765 | Out of range fields: ['on_order_qty']
+2026-08-06 18:34:36,818 WARNING [TRANSFORM] [DATA ERROR] Row number = 773 | FK violating fields: ['product_id']
+2026-08-06 18:34:36,818 WARNING [TRANSFORM] [DATA ERROR] Row number = 780 | FK violating fields: ['product_id']
+2026-08-06 18:34:36,818 WARNING [TRANSFORM] [DATA ERROR] Row number = 782 | FK violating fields: ['dealer_id']
+2026-08-06 18:34:36,818 WARNING [TRANSFORM] [DATA ERROR] Row number = 796 | Out of range fields: ['on_hand_qty']
+2026-08-06 18:34:36,819 WARNING [TRANSFORM] [DATA ERROR] Row number = 809 | Out of range fields: ['on_order_qty']
+2026-08-06 18:34:36,819 WARNING [TRANSFORM] [DATA ERROR] Row number = 813 | Bad type fields: ['snapshot_date']
+2026-08-06 18:34:36,819 WARNING [TRANSFORM] [DATA ERROR] Row number = 816 | Out of range fields: ['on_hand_qty']
+2026-08-06 18:34:36,820 WARNING [TRANSFORM] [DATA ERROR] Row number = 847 | Out of range fields: ['on_order_qty']
+2026-08-06 18:34:36,820 WARNING [TRANSFORM] [DATA ERROR] Row number = 849 | Missing required fields: ['snapshot_date']
+2026-08-06 18:34:36,820 WARNING [TRANSFORM] [DATA ERROR] Row number = 857 | Out of range fields: ['on_order_qty']
+2026-08-06 18:34:36,821 WARNING [TRANSFORM] [DATA ERROR] Row number = 863 | FK violating fields: ['product_id']
+2026-08-06 18:34:36,821 WARNING [TRANSFORM] [DATA ERROR] Row number = 868 | Missing required fields: ['snapshot_date']
+2026-08-06 18:34:36,821 WARNING [TRANSFORM] [DATA ERROR] Row number = 872 | Missing required fields: ['snapshot_date']
+2026-08-06 18:34:36,821 WARNING [TRANSFORM] [DATA ERROR] Row number = 879 | FK violating fields: ['product_id']
+2026-08-06 18:34:36,822 WARNING [TRANSFORM] [DATA ERROR] Row number = 892 | Out of range fields: ['on_order_qty']
+2026-08-06 18:34:36,822 INFO [TRANSFORM] Validation Complete | Total rows = 900 | Valid rows = 819 | Invalid rows = 81
+2026-08-06 18:34:36,822 INFO [LOAD] Saving valid_inventory to local
+2026-08-06 18:34:36,828 INFO [LOAD] Saved at /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Processed/Clean/inventory.csv
+2026-08-06 18:34:36,828 INFO [LOAD] Saving invalid_inventory to local
+2026-08-06 18:34:36,829 INFO [LOAD] Saved at /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Processed/Reject/inventory.csv
+2026-08-06 18:34:36,829 INFO [LOAD] Loading valid_inventory to database
+2026-08-06 18:34:36,830 INFO [LOAD] Connecting to database
+2026-08-06 18:34:36,844 INFO [LOAD] Connection successful
+2026-08-06 18:34:36,844 INFO [LOAD] Batch 1.0 transaction begin
+2026-08-06 18:34:36,888 INFO [LOAD] Transaction successful | Inserted 200 row(s)
+2026-08-06 18:34:36,889 INFO [LOAD] Batch 2.0 transaction begin
+2026-08-06 18:34:36,929 INFO [LOAD] Transaction successful | Inserted 200 row(s)
+2026-08-06 18:34:36,929 INFO [LOAD] Batch 3.0 transaction begin
+2026-08-06 18:34:36,979 INFO [LOAD] Transaction successful | Inserted 200 row(s)
+2026-08-06 18:34:36,979 INFO [LOAD] Batch 4.0 transaction begin
+2026-08-06 18:34:37,029 INFO [LOAD] Transaction successful | Inserted 200 row(s)
+2026-08-06 18:34:37,029 INFO [LOAD] Batch 5.0 transaction begin
+2026-08-06 18:34:37,040 INFO [LOAD] Transaction successful | Inserted 19 row(s)
+2026-08-06 18:34:37,041 INFO [LOAD] Recording etl metadata | inventory.csv
+2026-08-06 18:34:37,041 INFO [LOAD] Connecting to database
+2026-08-06 18:34:37,059 INFO [LOAD] Connection successful
+2026-08-06 18:34:37,070 INFO [LOAD] Record successful
+2026-08-06 18:34:37,070 INFO [LOAD] Saving inventory_etl_summary to local
+2026-08-06 18:34:37,070 INFO [LOAD] Saved to /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Meta/inventory_etl_summary.json
+2026-08-06 18:34:37,070 INFO [MAIN] [TIMER] inventory ETL execution time summary |
+                  Ingest Duration = 0.41 s
                   Transform Duration = 0.04 s
-                  Load Duration = 0.23 s
-2026-08-06 13:51:30,951 INFO [MAIN] 
+                  Load Duration = 0.22 s
+2026-08-06 18:34:37,070 INFO [MAIN] 
+
+********************Pipeline END********************
+
+2026-08-06 18:34:39,943 INFO [MAIN] 
+
 ********************Pipeline Start********************
 
-
-2026-08-06 13:51:30,951 INFO [MAIN] 
+2026-08-06 18:34:39,943 INFO [MAIN] 
 --------------------Dealer--------------------
-2026-08-06 13:51:30,951 INFO [INGEST] Downloading from S3 | Bucket = raw-bucket-427763921511-ap-south-1-an | Object = dirty/dealer.csv
-2026-08-06 13:51:31,387 INFO [INGEST] Download successful | Saved to /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/dealer.csv
-2026-08-06 13:51:31,388 INFO [INGEST] Creating hash | /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/dealer.csv
-2026-08-06 13:51:31,388 INFO [INGEST] Hash created successfullly
-2026-08-06 13:51:31,388 INFO [INGEST] Initiating search in etl_audit
-2026-08-06 13:51:31,388 INFO [INGEST] Connecting to Database
-2026-08-06 13:51:31,402 INFO [INGEST] Connection Successful
-2026-08-06 13:51:31,404 WARNING [INGEST] File already processed
-2026-08-06 13:51:31,404 INFO [MAIN] 
+2026-08-06 18:34:39,943 INFO [INGEST] Downloading from S3 | Bucket = raw-bucket-427763921511-ap-south-1-an | Object = dirty/dealer.csv
+2026-08-06 18:34:40,342 INFO [INGEST] Download successful | Saved to /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/dealer.csv
+2026-08-06 18:34:40,344 INFO [INGEST] Creating hash | /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/dealer.csv
+2026-08-06 18:34:40,345 INFO [INGEST] Hash created successfullly
+2026-08-06 18:34:40,345 INFO [INGEST] Initiating search in etl_audit
+2026-08-06 18:34:40,345 INFO [INGEST] Connecting to Database
+2026-08-06 18:34:40,366 INFO [INGEST] Connection Successful
+2026-08-06 18:34:40,367 WARNING [INGEST] File already processed
+2026-08-06 18:34:40,368 INFO [MAIN] 
 --------------------Product--------------------
-2026-08-06 13:51:31,404 INFO [INGEST] Downloading from S3 | Bucket = raw-bucket-427763921511-ap-south-1-an | Object = dirty/product.csv
-2026-08-06 13:51:31,752 INFO [INGEST] Download successful | Saved to /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/product.csv
-2026-08-06 13:51:31,754 INFO [INGEST] Creating hash | /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/product.csv
-2026-08-06 13:51:31,754 INFO [INGEST] Hash created successfullly
-2026-08-06 13:51:31,754 INFO [INGEST] Initiating search in etl_audit
-2026-08-06 13:51:31,754 INFO [INGEST] Connecting to Database
-2026-08-06 13:51:31,774 INFO [INGEST] Connection Successful
-2026-08-06 13:51:31,776 WARNING [INGEST] File already processed
-2026-08-06 13:51:31,777 INFO [MAIN] 
+2026-08-06 18:34:40,368 INFO [INGEST] Downloading from S3 | Bucket = raw-bucket-427763921511-ap-south-1-an | Object = dirty/product.csv
+2026-08-06 18:34:40,826 INFO [INGEST] Download successful | Saved to /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/product.csv
+2026-08-06 18:34:40,827 INFO [INGEST] Creating hash | /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/product.csv
+2026-08-06 18:34:40,828 INFO [INGEST] Hash created successfullly
+2026-08-06 18:34:40,828 INFO [INGEST] Initiating search in etl_audit
+2026-08-06 18:34:40,828 INFO [INGEST] Connecting to Database
+2026-08-06 18:34:40,846 INFO [INGEST] Connection Successful
+2026-08-06 18:34:40,848 WARNING [INGEST] File already processed
+2026-08-06 18:34:40,848 INFO [MAIN] 
 --------------------Inventory--------------------
-2026-08-06 13:51:31,777 INFO [INGEST] Downloading from S3 | Bucket = raw-bucket-427763921511-ap-south-1-an | Object = dirty/inventory.csv
-2026-08-06 13:51:32,146 INFO [INGEST] Download successful | Saved to /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/inventory.cv
-2026-08-06 13:51:32,149 INFO [INGEST] Creating hash | /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/inventory.cv
-2026-08-06 13:51:32,150 INFO [INGEST] Hash created successfullly
-2026-08-06 13:51:32,151 INFO [INGEST] Initiating search in etl_audit
-2026-08-06 13:51:32,151 INFO [INGEST] Connecting to Database
-2026-08-06 13:51:32,174 INFO [INGEST] Connection Successful
-2026-08-06 13:51:32,178 WARNING [INGEST] File already processed
+2026-08-06 18:34:40,848 INFO [INGEST] Downloading from S3 | Bucket = raw-bucket-427763921511-ap-south-1-an | Object = dirty/inventory.csv
+2026-08-06 18:34:41,242 INFO [INGEST] Download successful | Saved to /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/inventory.csv
+2026-08-06 18:34:41,244 INFO [INGEST] Creating hash | /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/inventory.csv
+2026-08-06 18:34:41,245 INFO [INGEST] Hash created successfullly
+2026-08-06 18:34:41,245 INFO [INGEST] Initiating search in etl_audit
+2026-08-06 18:34:41,245 INFO [INGEST] Connecting to Database
+2026-08-06 18:34:41,264 INFO [INGEST] Connection Successful
+2026-08-06 18:34:41,265 WARNING [INGEST] File already processed
+2026-08-06 18:34:41,265 INFO [MAIN] 
+
+********************Pipeline END********************
+
