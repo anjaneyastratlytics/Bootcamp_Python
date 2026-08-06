@@ -1503,3 +1503,37 @@
                   Ingest Duration = 0.46 s
                   Transform Duration = 0.08 s
                   Load Duration = 0.78 s
+2026-08-05 15:05:14,847 INFO [MAIN] 
+********************Pipeline Start********************
+
+
+2026-08-05 15:05:14,847 INFO [MAIN] 
+--------------------Dealer--------------------
+2026-08-05 15:05:14,847 INFO [INGEST] Downloading from S3 | Bucket = raw-bucket-427763921511-ap-south-1-an | Object = dirty/dealer.csv
+2026-08-05 15:05:15,590 INFO [INGEST] Download successful | Saved to /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/dealer.csv
+2026-08-05 15:05:15,593 INFO [INGEST] Creating hash | /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/dealer.csv
+2026-08-05 15:05:15,593 INFO [INGEST] Hash created successfullly
+2026-08-05 15:05:15,593 INFO [INGEST] Initiating search in etl_audit
+2026-08-05 15:05:15,593 INFO [INGEST] Connecting to Database
+2026-08-05 15:05:15,622 INFO [INGEST] Connection Successful
+2026-08-05 15:05:15,807 WARNING [INGEST] File already processed
+2026-08-05 15:05:15,808 INFO [MAIN] 
+--------------------Product--------------------
+2026-08-05 15:05:15,809 INFO [INGEST] Downloading from S3 | Bucket = raw-bucket-427763921511-ap-south-1-an | Object = dirty/product.csv
+2026-08-05 15:05:16,255 INFO [INGEST] Download successful | Saved to /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/product.csv
+2026-08-05 15:05:16,257 INFO [INGEST] Creating hash | /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/product.csv
+2026-08-05 15:05:16,257 INFO [INGEST] Hash created successfullly
+2026-08-05 15:05:16,257 INFO [INGEST] Initiating search in etl_audit
+2026-08-05 15:05:16,257 INFO [INGEST] Connecting to Database
+2026-08-05 15:05:16,293 INFO [INGEST] Connection Successful
+2026-08-05 15:05:16,295 WARNING [INGEST] File already processed
+2026-08-05 15:05:16,296 INFO [MAIN] 
+--------------------Inventory--------------------
+2026-08-05 15:05:16,296 INFO [INGEST] Downloading from S3 | Bucket = raw-bucket-427763921511-ap-south-1-an | Object = dirty/inventory.csv
+2026-08-05 15:05:16,718 INFO [INGEST] Download successful | Saved to /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/inventory.cv
+2026-08-05 15:05:16,719 INFO [INGEST] Creating hash | /home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/05_ETL_Pipeline/Data/Source/inventory.cv
+2026-08-05 15:05:16,719 INFO [INGEST] Hash created successfullly
+2026-08-05 15:05:16,719 INFO [INGEST] Initiating search in etl_audit
+2026-08-05 15:05:16,720 INFO [INGEST] Connecting to Database
+2026-08-05 15:05:16,735 INFO [INGEST] Connection Successful
+2026-08-05 15:05:16,736 WARNING [INGEST] File already processed

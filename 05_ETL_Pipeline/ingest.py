@@ -1,4 +1,5 @@
-from config import s3_region, DB_HOST, DB_NAME, DB_USER, DB_PORT
+from config import AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
+from config import s3_region, DB_HOST, DB_NAME, DB_USER, DB_PORT, DB_PASS
 from logger import log_info, log_warning, log_system_error
 from helper import retry
 
@@ -22,8 +23,8 @@ def download_from_s3(bucket_name,object_key,local_path):
     try:
         s3 = boto3.client(
             's3',
-            aws_access_key_id = os.getenv("AWS_ACCESS_KEY_ID"),
-            aws_secret_access_key = os.getenv("AWS_SECRET_ACCESS_KEY"),
+            aws_access_key_id = AWS_ACCESS_KEY_ID,
+            aws_secret_access_key = AWS_SECRET_ACCESS_KEY,
             region_name = s3_region
         )
         s3.download_file(bucket_name,object_key,local_path)
@@ -66,7 +67,7 @@ def is_already_processed(file_hash):
             host = DB_HOST,
             database = DB_NAME,
             user = DB_USER,
-            password = os.getenv("DB_PASS"),
+            password = DB_PASS,
             port = DB_PORT
         ) as conn:
             log_info(module,f"Connection Successful")

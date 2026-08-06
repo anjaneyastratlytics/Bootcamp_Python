@@ -1,4 +1,4 @@
-from config import DB_HOST,DB_NAME,DB_USER,DB_PORT
+from config import DB_HOST,DB_NAME,DB_USER,DB_PORT,DB_PASS
 from config import field_names_dict, postgres_load_queries, batch_size_dict
 from logger import log_info,log_warning,log_system_error
 from helper import retry
@@ -60,7 +60,7 @@ def get_db_connection():
             host = DB_HOST,
             database = DB_NAME,
             user = DB_USER,
-            password = os.getenv("DB_PASS"),
+            password = DB_PASS,
             port = DB_PORT
         )
         log_info(module,f"Connection successful")

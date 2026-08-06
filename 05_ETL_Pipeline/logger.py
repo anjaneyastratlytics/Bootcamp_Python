@@ -13,6 +13,9 @@ def log_info(module,msg):
     
 def log_warning(module,msg):
     logging.warning(module+" "+msg)
+
+def log_error(module,msg):
+    logging.error(module+" "+msg)
     
 def log_data_error(module,msg):
     logging.warning(module+" [DATA ERROR] "+msg)

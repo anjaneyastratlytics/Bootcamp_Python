@@ -1,43 +1,48 @@
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
 # Logging Format
 log_format = "%(asctime)s %(levelname)s %(message)s"
 
-# AWS S3
-s3_region = 'ap-south-1'
-raw_bucket = 'raw-bucket-427763921511-ap-south-1-an'
-dirty_dealer_key = 'dirty/dealer.csv'
-dirty_product_key = 'dirty/product.csv'
-dirty_inventory_key = 'dirty/inventory.csv'
-dirty_sales_key = 'dirty/sales_logs.jsonl'
+# AWS Credentials
+AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+## S3
+s3_region = os.getenv("S3_REGION")
+raw_bucket = os.getenv("RAW_BUCKET")
+dirty_dealer_key = os.getenv("DIRTY_DEALER_KEY")
+dirty_product_key = os.getenv("DIRTY_PRODUCT_KEY")
+dirty_inventory_key = os.getenv("DIRTY_INVENTORY_KEY")
+dirty_sales_key = os.getenv("DIRTY_SALES_KEY")
 
-# PGADMIN DB
-DB_HOST = "localhost"
-# DB_NAME = "BootcampSL"
-DB_NAME = "PY201"
-DB_USER = "postgres"
-DB_PORT = 5432
+# Postgres Connection
+DB_HOST = os.getenv("DB_HOST")
+DB_NAME = os.getenv("DB_NAME")
+DB_USER = os.getenv("DB_USER")
+DB_PORT = os.getenv("DB_PORT")
+DB_PASS = os.getenv("DB_PASS")
 
 # Local Paths
-# root_path = "C:/Users/KIIT/Desktop/Stratlytics/02_Bootcamp/04_Python/"
-root_path = "/home/name04/Desktop/Anjaneya/02_Bootcamp/04_Python/Bootcamp_Python/"
 
-dirty_dealer_path = root_path + "05_ETL_Pipeline/Data/Source/dealer.csv"
-dirty_product_path = root_path + "05_ETL_Pipeline/Data/Source/product.csv"
-dirty_inventory_path = root_path + "05_ETL_Pipeline/Data/Source/inventory.cv"
-dirty_sales_path = root_path + "05_ETL_Pipeline/Data/Source/sales_logs.jsonl"
+dirty_dealer_path = "Data/Source/dealer.csv"
+dirty_product_path = "Data/Source/product.csv"
+dirty_inventory_path = "Data/Source/inventory.cv"
+dirty_sales_path =  "Data/Source/sales_logs.jsonl"
 
-pipeline_log_path = root_path + "05_ETL_Pipeline/Data/Meta/pipeline.log"
+pipeline_log_path = "Data/Meta/pipeline.log"
 
-clean_dealer_path = root_path + "05_ETL_Pipeline/Data/Processed/Clean/dealer.csv"
-clean_product_path = root_path + "05_ETL_Pipeline/Data/Processed/Clean/product.csv"
-clean_inventory_path = root_path + "05_ETL_Pipeline/Data/Processed/Clean/inventory.cv"
+clean_dealer_path = "Data/Processed/Clean/dealer.csv"
+clean_product_path = "Data/Processed/Clean/product.csv"
+clean_inventory_path = "Data/Processed/Clean/inventory.cv"
 
-reject_dealer_path = root_path + "05_ETL_Pipeline/Data/Processed/Reject/dealer.csv"
-reject_product_path = root_path + "05_ETL_Pipeline/Data/Processed/Reject/product.csv"
-reject_inventory_path = root_path + "05_ETL_Pipeline/Data/Processed/Reject/inventory.cv"
+reject_dealer_path = "Data/Processed/Reject/dealer.csv"
+reject_product_path = "Data/Processed/Reject/product.csv"
+reject_inventory_path = "Data/Processed/Reject/inventory.cv"
 
-dealer_validation_summary_path = root_path + "05_ETL_Pipeline/Data/Meta/dealer_validation_summary.json"
-product_validation_summary_path = root_path + "05_ETL_Pipeline/Data/Meta/product_validation_summary.json"
-inventory_validation_summary_path = root_path + "05_ETL_Pipeline/Data/Meta/inventory_validation_summary.json"
+dealer_validation_summary_path = "Data/Meta/dealer_validation_summary.json"
+product_validation_summary_path = "Data/Meta/product_validation_summary.json"
+inventory_validation_summary_path = "Data/Meta/inventory_validation_summary.json"
 
 
 # Data Validation
